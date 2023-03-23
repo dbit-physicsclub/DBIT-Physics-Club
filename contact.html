@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D.B.I.T Physics club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body onload="hideLoader()">
+    <div class="loader">
+        <div class="loader__galaxy"></div>
+    </div>
+          
+    <div class="content">    
+    <nav class="nav-bar" id="header">
+        <div class="logo">
+               <a href="home.html">Physics Club</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="events.html">Events</a>
+                <a href="#Blogs">Blogs</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <span onclick="openNav()">&#9776;</span>
+    </nav>
+    <div class="contact">
+        <div class="text-stroke">Get<br>In<br>Touch</div>
+        <div class="contactcontainer">
+            <!-- <div class="numberheading">Contact Number</div>
+            <div class="number">+91 9912349876</div> -->
+            <div class="emailheading">Email ID</div>
+            <div class="email">physicsclub@dbit.in</div>
+            <div class="socialheading">Instagram Acoount</div>
+            <div class="social">@dbitphysicsclub</div>
+
+        </div>
+    </div></div>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+
+        function hideLoader() {
+            setTimeout(function() {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            }, 2000);
+}
+    </script>
+</body>
+</html>

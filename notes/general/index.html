@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<link rel="stylesheet" href="style.css">
+
+	<!-- this three tage are to support LaTeX synstax-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+		integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+		integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+		crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+		integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+	<!-- LaTeX-->
+
+	<title>Relativity</title>
+
+	<script defer src='../../../lib/gravityClass.js'></script>
+	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/three.js/98/three.min.js'></script>
+	<script defer src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/464612/orbitcontrols.js'></script>
+	<script defer src="fabric.js "></script>
+</head>
+
+<body>
+
+	<!--navbar -->
+
+	<nav class="nav-bar" id="header">
+		<div class="logo">
+			<a href=""><img src="../../Img/DBIT.png" alt=""><b>DON BOSCO</b> <span>Institute of Technology</span></a>
+			|
+			<a href=""><img src="../../Img/logo.jpg" alt="">
+		</div>
+
+	</nav>
+
+	<!--navbar -->
+
+	<!-- General Relativity start -->
+	<header>
+		<h1>
+			<a>General Relativity</a>
+		</h1>
+	</header>
+
+	<article>
+		<p>
+			In 1907 Einstein published an important <a href="https://www.youtube.com/watch?v=jx3wcdCtL58">thought experiment</a>.
+			Imagine a person in a box with no way to look outside.
+			That person couldn't distinguish between the acceleration of gravity or the acceleration from a rocket.
+			If both situations look and feel the same, maybe they are the same.
+			Maybe acceleration and gravity are <a href="https://www.youtube.com/watch?v=NblR01hHK6U">equivalent</a>.
+			<br>
+			That person wouldn't be able to distinguish between the acceleration of gravity or floating in space with no acceleration.
+			<br>
+			A free fall feels the same as not accelerating.
+		</p>
+		<br>
+		<p class="svg-hadding"> Classical Physics</p>
+		<style>
+			#white-out:hover {
+				opacity: 1;
+			}
+		</style>
+		<svg id="equivalent" viewBox="0 -75 595 275 " fill="#222" stroke="#222" stroke-width="2" style="
+		border-radius: 10px;
+		border: 2px solid #000;
+		background-color: #ddf8ff;">
+
+			<defs>
+				<g id="vector">
+					<line x1="0" y1="0" x2="0" y2="35" />
+					<polygon points="0,0 -6,-12 0,-10 6,-12" transform='translate(0 40)' />
+				</g>
+				<g id="tree">
+					<rect x="-2.5" y="-20" width="5" height="35" fill="#997" stroke="none" />
+					<path d="M-15 -20 h30  l-6 -10 h3   l-5.25 -8 h3   l-4.5 -6 h2.25   l-3.75 -5 h2.25   l-3.75 -5 h1.5   l-3.75 -7
+									l-3.75 7 h1.5  l-3.75 5 h2.25   l-3.75 5 h2.25   l-4.5 6 h2.25   l-5.25 8 h3  l-6 10z" fill="#aba" stroke="none" />
+				</g>
+
+				<g id="tree-small">
+					<rect x="-1.5" y="-20" width="3" height="35" fill="#aa8" stroke="none" />
+					<path d="M-21 -20 h30  l-5 -7.5 h3   l-4.5 -6 h3   l-4 -4.5 h2.25   l-3 -3.75 h1.5   l-2.5 -3.75
+						 l-2.5 3.75 h1.5   l-3 3.75 h2.25   l-3.5 4.5 h2.25   l-4.5 6 h3  l-5 7.5z" fill="#bcb" stroke="none" />
+				</g>
+			</defs>
+
+			<use x="10" y="199" xlink:href="#tree" />
+			<use x="35" y="190" xlink:href="#tree" />
+			<use x="60" y="185" xlink:href="#tree" />
+			<use x="85" y="182" xlink:href="#tree-small" />
+			<use x="215" y="182" xlink:href="#tree-small" />
+			<use x="240" y="185" xlink:href="#tree" />
+			<use x="265" y="190" xlink:href="#tree" />
+			<use x="290" y="199" xlink:href="#tree" />
+
+			<circle r="405" cx="150" cy="565" fill="#876" stroke="none" />
+			<text id="hide-on-click" x="150" y="190" stroke="none" fill="#210" font-size="18" text-anchor="middle">click to animate</text>
+			<path d="M100 155 l50 -80 l50 80  l-50 -10 l-50 10" fill="#aaa" stroke="none" />
+			<path d="M120.5 160.5   q-10 -80, 30 -120  q40 40, 30 120z" fill="#fff" />
+
+			<circle id="earth-ball" r="5" cx="150" cy="70" fill="#f50" stroke="none" />
+			<rect x="300.5" y="-150" width="600" height="600" fill="#000" stroke-width="1" />
+			<g fill="#777" stroke="none">
+				<circle r="1" cx="320" cy="175" />
+				<circle r="1" cx="360" cy="75" />
+				<circle r="1" cx="350" cy="-15" />
+				<circle r="1" cx="420" cy="185" />
+				<circle r="1" cx="460" cy="115" />
+				<circle r="1" cx="500" cy="65" />
+				<circle r="1" cx="510" cy="50" />
+				<circle r="1" cx="530" cy="115" />
+				<circle r="1" cx="580" cy="-5" />
+			</g>
+			<g id="rocket">
+				<path d="M400 155 l50 -80 l50 80  l-50 -10 l-50 10" fill="#777" stroke="none" />
+				<path d="M420.5 160.5   q-10 -80, 30 -120  q40 40, 30 120" fill="#fff" stroke="none" />
+				<path id="rocket-fire" d="" fill="#fa0" stroke="none" />
+			</g>
+			<circle r="5" cx="450" cy="70" fill="#f50" stroke="none" />
+
+			<g id="hide-on-click-11">
+				<!-- <rect x="444" y="75" rx="2" ry="2" width="12" height="4" fill="#555" stroke="none" /> -->
+				<rect x="144" y="75" rx="2" ry="2" width="12" height="4" fill="#555" stroke="none" />
+			</g>
+		</svg>
+		<ul class="listing">
+			<li>
+				On Earth, the rocket is at rest and the ball accelerates because of gravity.
+			</li>
+			<li>
+				In space, the ball is at rest and the rocket accelerates because of thrust.
+			</li>
+		</ul>
+		<br><br>
+		<span class="center">Equivalent Acceleration and Gravity</span>
+		<svg id="equivalent" viewBox="0 -75 595 275" fill="#222" stroke="#222" stroke-width="2" style="
+		border-radius: 10px;
+		border: 2px solid #000;
+		background-color: #ddf8ff;">
+			<g id="earth-ball-2">
+				<use x="10" y="199" xlink:href="#tree" />
+				<use x="35" y="190" xlink:href="#tree" />
+				<use x="60" y="185" xlink:href="#tree" />
+				<use x="85" y="182" xlink:href="#tree-small" />
+				<use x="215" y="182" xlink:href="#tree-small" />
+				<use x="240" y="185" xlink:href="#tree" />
+				<use x="265" y="190" xlink:href="#tree" />
+				<use x="290" y="199" xlink:href="#tree" />
+				<circle r="405" cx="150" cy="565" fill="#876" stroke="none" />
+				<path d="M100 155 l50 -80 l50 80  l-50 -10 l-50 10" fill="#aaa" stroke="none" />
+				<path d="M120.5 160.5   q-10 -80, 30 -120  q40 40, 30 120z" fill="#fff" />
+			</g>
+			<text id="hide-on-click-2" x="150" y="190" stroke="none" fill="#210" font-size="18" text-anchor="middle">click to animate</text>
+
+			<circle id="earth-ball-2" r="5" cx="150" cy="70" fill="#f50" stroke="none" />
+			<rect x="300.5" y="-100" width="400" height="400" fill="#000" stroke-width="1" />
+			<g fill="#777" stroke="none">
+				<circle r="1" cx="320" cy="175" />
+				<circle r="1" cx="360" cy="75" />
+				<circle r="1" cx="350" cy="-15" />
+				<circle r="1" cx="420" cy="185" />
+				<circle r="1" cx="460" cy="115" />
+				<circle r="1" cx="500" cy="65" />
+				<circle r="1" cx="510" cy="50" />
+				<circle r="1" cx="530" cy="115" />
+				<circle r="1" cx="580" cy="-5" />
+			</g>
+			<g id="rocket-2">
+				<path d="M400 155 l50 -80 l50 80  l-50 -10 l-50 10" fill="#777" stroke="none" />
+				<path d="M420.5 160.5   q-10 -80, 30 -120  q40 40, 30 120" fill="#fff" stroke="none" />
+				<path id="rocket-fire-2" d="" fill="#fa0" stroke="none" />
+			</g>
+			<circle r="5" cx="450" cy="70" fill="#f50" stroke="none" />
+
+			<g id="hide-on-click-22">
+				<!-- <rect x="444" y="75" rx="2" ry="2" width="12" height="4" fill="#555" stroke="none" /> -->
+				<rect x="144" y="75" rx="2" ry="2" width="12" height="4" fill="#555" stroke="none" />
+			</g>
+		</svg>
+		Treating gravity and acceleration as equivalent means that both situations are the same.
+		The ball is at rest and the rocket is accelerating. The 9.8 m/s² we feel is caused by the Earth accelerating upward like a rocket!
+		<script>
+			window.addEventListener('load', () => {
+				equivalence()
+				equivalence2()
+			});
+
+			function rocketFlicker(target, reset = false) {
+				if (reset) {
+					target.setAttribute("d", "M420 164 l15 20 l15 -20 l15 20 l15 -20");
+				} else {
+					const SCALE = 13
+					const LX = SCALE * (Math.random() - 0.5)
+					const RX = SCALE * (Math.random() - 0.5)
+					const LY = SCALE * (Math.random() - 0.5) + 6
+					const RY = SCALE * (Math.random() - 0.5) + 6
+					target.setAttribute("d", `M420 164 l${15+LX} ${20+LY} l${15-LX} ${-20-LY} l${15+RX} ${20+LY} l${15-RX} ${-20-LY}`);
+				}
+			}
+
+			function equivalence() {
+				const GRAVITY = 0.007;
+				document.getElementById("equivalent").addEventListener('click', () => {
+					animate();
+				});
+
+				function animate() {
+					document.getElementById("hide-on-click").style.display = "none" //hide click message
+					document.getElementById("hide-on-click-11").style.display = "none" //hide click message
+
+					const ball = {
+						target: document.getElementById("earth-ball"),
+						position: {
+							x: 150,
+							y: 70
+						},
+						velocity: {
+							x: 0,
+							y: 0
+						}
+					}
+
+					const rocket = {
+						target: document.getElementById("rocket"),
+						position: {
+							x: 0,
+							y: 0
+						},
+						velocity: {
+							x: 0,
+							y: 0
+						}
+					}
+
+					function cycle() {
+						if (ball.position.y > 154.5) {
+							rocketFlicker(document.getElementById("rocket-fire"), true)
+						} else {
+							requestAnimationFrame(cycle);
+
+							// calculate motion
+							ball.position.y += ball.velocity.y
+							ball.velocity.y += GRAVITY
+							rocket.position.y += rocket.velocity.y
+							rocket.velocity.y -= GRAVITY
+
+							// draw
+							ball.target.setAttribute("cy", ball.position.y);
+							rocket.target.setAttribute("transform", `translate(0 ${rocket.position.y})`);
+							rocketFlicker(document.getElementById("rocket-fire"))
+						}
+					}
+					requestAnimationFrame(cycle);
+				}
+			}
+
+			function equivalence2() {
+				const GRAVITY = 0.007;
+				document.getElementById("equivalent-2").addEventListener('click', () => {
+					animate();
+				});
+
+				function animate() {
+					document.getElementById("hide-on-click-2").style.display = "none"
+					document.getElementById("hide-on-click-22").style.display = "none"
+
+					const ball = {
+						target: document.getElementById("earth-ball-2"),
+						position: {
+							x: 0,
+							y: 0
+						},
+						velocity: {
+							x: 0,
+							y: 0
+						}
+					}
+
+					const rocket = {
+						target: document.getElementById("rocket-2"),
+						position: {
+							x: 0,
+							y: 0
+						},
+						velocity: {
+							x: 0,
+							y: 0
+						}
+					}
+
+					function cycle() {
+						if (ball.position.y < -84.5) {
+							rocketFlicker(document.getElementById("rocket-fire-2"), true)
+						} else {
+							requestAnimationFrame(cycle);
+
+							// calculate motion
+							ball.position.y += ball.velocity.y
+							ball.velocity.y -= GRAVITY
+							rocket.position.y += rocket.velocity.y
+							rocket.velocity.y -= GRAVITY
+
+							// draw
+							ball.target.setAttribute("transform", `translate(0 ${ball.position.y})`);
+							rocket.target.setAttribute("transform", `translate(0 ${rocket.position.y})`);
+							rocketFlicker(document.getElementById("rocket-fire-2"))
+						}
+					}
+					requestAnimationFrame(cycle);
+				}
+			}
+		</script>
+
+		<div class='example'>
+			<strong>Question:</strong> I'm sitting at my desk typing this question right now. Am I at rest? When is a person at rest on Earth?
+			<details>
+				<summary>answer</summary>
+				<p>
+					I am not at rest. I am accelerating at up at 9.8 m/s² because my chair is pushing me upwards.
+				</p>
+				<p>
+					The <a href="https://timhutton.github.io/GravityIsNotAForce/">relativistic</a> point of view would be that the space around the Earth is compressing, but the atoms of the Earth resists this compression.
+					This means that the surface of the Earth is constantly accelerating upwards.
+				</p>
+				<p>
+					On Earth the only way to not accelerate up would be to fall.
+					Falling is when you are at rest.
+				</p>
+			</details>
+		</div>
+
+		<h2 class='underlined' id="general-relativity">General Relativity</h2>
+		<p>
+			The equivalence of acceleration and gravity
+			drove Einstein towards a new theory that would extend the scope of special relativity to include gravity.
+			In 1915 Einstein completed his theory of general relativity.
+			General relativity describes gravity as the curvature of space and time, or spacetime.
+			<!-- Energy curves the spacetime around it. -->
+		</p>
+		<h3 class="definition">
+			Spacetime is <a href="https://www.youtube.com/watch?v=DdC0QN6f3G4">curved</a> by energy.
+			Gravitation occurs when a body tries to move in a straight line through curved spacetime.
+		</h3>
+		<p>
+			<a href="..\special\index.html#mass-energy">Mass</a> is a type of potential energy, so it also curves spacetime.
+		</p>
+
+		<div class="example-small">
+			<style>
+				.full-page {
+					position: fixed;
+					top: -5px;
+					left: -5px;
+					z-index: 0;
+					margin: 0;
+					padding: 0;
+				}
+			</style>
+			<canvas id='three-fabric-load' width='600' height='100' onclick="fabric('three-fabric')"></canvas>
+			<canvas id='three-fabric' width='600' height='0'></canvas>
+			In the simulation above, classical gravitational potential energy is represented as warping a 2-D surface into a 3rd dimension.
+			This isn't exactly the same math as general relativity, but it's a good analogy.
+			<p>
+				As bodies travel through curved space they follow the shortest distance between two points, a straight line.
+				The pull of gravity is what a straight line through curved space looks like.
+				Another example of a straight line through a curved space is the <a href="https://www.greatcirclemap.com/roadmap?routes=%20LAX-SIN%2C%20LAX-ATL%2C%20ATL-LON">great circle routes</a> around a sphere.
+			</p>
+		</div>
+		<p>
+			A full mathematical explanation of general relativity is beyond the scope of this page, but we will explore some of the predictions:
+			<li>
+				<strong> <a href="https://en.wikipedia.org/wiki/Gravitational_lens">gravitational lensing:</a> </strong> gravity bends the path of light
+			</li>
+			<li>
+				<strong> <a href="https://www.youtube.com/watch?v=4GbWfNHtHRg">gravity</a> <a href="https://www.youtube.com/watch?v=DjcS1kRkc6M">waves:</a> </strong>
+				moving sources of gravity make waves in spacetime
+			</li>
+			<li>
+				<strong> <a href="#time">gravitational time dilation:</a> </strong> gravity slows time
+			</li>
+			<li>
+				<strong> <a href="https://www.youtube.com/watch?v=e-P5IFTqB98">black holes:</a> </strong> very dense bodies with gravity so strong that time stops
+			</li>
+		</p>
+		<p>
+			The theory of general relativity suggests a significant change to fundamental aspects of physics,
+			but there is overwhelming <a href="https://en.wikipedia.org/wiki/Tests_of_general_relativity">evidence</a> in its favor.
+		</p>
+		<p>
+			General relativity is currently the best description of gravity, but it doesn't include any quantum mechanical ideas, like wave particle duality.
+			This isn't normally a problem because each theory operates at different scales.
+			Quantum mechanics explains small and isolated bodies. General relativity explains very massive bodies.
+		</p>
+		<br>
+		<p>
+			Some extreme situations do require both.
+			For example, black holes are both very small and very massive.
+			Neither quantum mechanics or relativity alone can explain how they work.
+			We hope that one day theoretical physicists will develop a "Grand Unified Theory" that combines both theories.
+		</p>
+
+		<h2 class='underlined' id="time">Gravitational Time Dilation</h2>
+		<p>
+			General relativity predicts that an accelerating reference frame experiences time dilation.
+			This effect is similar, but different from how relative velocity dilates time in special relativity.
+			<br>
+			A big difference from special relativity is that acceleration based time dilation is consistent for all observers.
+			This makes the acceleration based time dilation less complex.
+		</p>
+		<br>
+		<p>
+			General relativity says that massive bodies curve the spacetime around them.
+			This means an object in curved spacetime must accelerate to stay in the same position.
+			This acceleration produces time dilation.
+		</p>
+		<br>
+		<p>
+			You can't feel <strong>time dilation</strong> inside an accelerating frame of reference,
+			but observers outside the frame see everything inside as slower.
+			People age slower and move slower. They talk slower, with deeper voices.
+			Light originating inside a time dilated frame of reference has a lower frequency and a different color when observed from outside.
+		</p>
+
+		<h2 class='underlined'>Black Holes</h2>
+		<p>
+			Extremely dense masses can push the gravitational time dilation equation to the point of breaking when you have to take the square root of a negative number. We can find where the equation breaks down by solving for the radius where the time dilation approaches zero.
+		</p>
+		<p>
+			This radius is called the Schwarzschild radius, or the <strong>event horizon</strong>.
+		</p>
+		
+		<p>
+			Objects that achieve the high density needed to reach this point are called <strong>black holes</strong>. We can only speculate how black holes might behave, but the time dilation equation suggests very extreme outcomes.
+			As a body approaches the event horizon, the passage of time approaches zero. From an outsider's perspective, objects fall into black holes and never get out, frozen in time.
+		</p>
+		<p>
+			<a href="http://rantonels.github.io/starless/">Black holes</a> are a possible outcome at the end of the <a href="https://en.wikipedia.org/wiki/Stellar_evolution">life</a> of a very massive star.
+			Stars convert mass into energy through nuclear fusion. This energy balances the force of gravity and prevents stars from becoming black holes. When stars runs out of nuclear fuel, gravity will dominate and a black hole may form.
+		</p>
+		<p>
+			At the center of most galaxies there is a <a href="https://www.youtube.com/watch?v=S_GVbuddri8">super massive black hole</a>. Even our galaxy, the Milky Way, has <a href="https://www.youtube.com/watch?v=TF8THY5spmo">one</a> with a mass of 4 million Suns.</p>
+		<p>
+			An accurate black hole model probably needs a unified theory of physics that combines general relativity with quantum field theory.
+			A grand unified theory of physics doesn't exist yet, but many physicists are actively looking for one.
+		</p>
+
+	<script>
+		renderMathInElement(document.body);
+	</script>
+
+
+<!-- General Relativity end -->
+
+
+<!-- Special Relativity start -->
+
+<header>
+	<h1>
+		<a>Special Relativity</a>
+	</h1>
+</header>
+<article>
+	<p>
+		Speed and velocity have no meaning without something to reference. If I said we are moving at 230&nbsp;000
+		m/s,
+		your first question should be, "relative to what?". A plane? The Earth? The Sun?
+	</p>
+	<p>
+		We are moving at 230&nbsp;000 m/s relative to our galaxy, the Milky Way.
+	</p>
+
+	<div class="definition">
+		Velocity must be relative to a reference frame. A
+		<strong>reference frame</strong> is a point of view from which events are observed.
+	</div>
+	<ul class="listing">
+		<li>A train is moving at 40 m/s relative to the train track.</li>
+		<li>The same train is stationary relative to a passenger on the train.</li>
+	</ul>
+	<br> <br> <br> <br>
+</article>
+<canvas class='center' id="relative" width='600' height='400'
+	style="background: #111; border-radius: 0px;"></canvas>
+<article>
+	<p>Each observer only sees motion in others. They see themselves at rest.
+		<br> Move the mouse vertically to change observers in the animation above.
+		<br> (note: special relativity isn't included yet in this animation.)
+	</p>
+
+
+
+
+	<div class='example'>
+		<p>
+			<strong>Question:</strong> A train moving at 20 m/s makes a sound with its steam whistle.
+			Sound moves through air at around 343 m/s relative to the air.
+			How fast would each observer measure the speed of sound?
+		</p>
+		<ul class="listing">
+			<li><strong>Observer 1:</strong> A person at the train station.</li>
+			<li><strong>Observer 2:</strong> A person at the back of the train. </li>
+		</ul>
+
+		<details>
+			<summary>answer</summary>
+			<br>
+			<ul class="listing">
+				<li>
+					<strong>Observer 1:</strong>343 m/s.
+					<br><br>The person on the ground measures the speed of sound as normal because they are at rest
+					relative to the air.
+				</li>
+				<li>
+					<strong>Observer 2:</strong>343 m/s + 20 m/s = 363 m/s
+					<br><br>The person on the train is moving relative to the air so they will measure the speed of
+					sound as either higher or lower.
+				</li>
+			</ul>
+		</details>
+	</div>
+</article>
+
+<div class='example' id="train-1" style="margin: auto;">
+	<svg viewBox="30 -25 540 149">
+		<defs>
+			<g id="tree">
+				<rect x="-2.5" y="-20" width="5" height="35" fill="#bb9" stroke="none" />
+				<path d="M-15 -20 h30  l-6 -10 h3   l-5.25 -8 h3   l-4.5 -6 h2.25   l-3.75 -5 h2.25   l-3.75 -5 h1.5   l-3.75 -7
+							l-3.75 7 h1.5  l-3.75 5 h2.25   l-3.75 5 h2.25   l-4.5 6 h2.25   l-5.25 8 h3  l-6 10z" fill="#cdc"
+					stroke="none" />
+			</g>
+			<g id="tree-small">
+				<rect x="-1.5" y="-20" width="3" height="35" fill="#cca" stroke="none" />
+				<path d="M-21 -20 h30  l-5 -7.5 h3   l-4.5 -6 h3   l-4 -4.5 h2.25   l-3 -3.75 h1.5   l-2.5 -3.75
+				 l-2.5 3.75 h1.5   l-3 3.75 h2.25   l-3.5 4.5 h2.25   l-4.5 6 h3  l-5 7.5z" fill="#ded" stroke="none" />
+			</g>
+			<g id="train-freight">
+				<g fill="#333" stroke="none">
+					<circle cx="6" cy="20" r="3.5" />
+					<circle cx="14" cy="20" r="3.5" />
+					<circle cx="76" cy="20" r="3.5" />
+					<circle cx="84" cy="20" r="3.5" />
+				</g>
+				<rect x="0" y="0" rx="1" width="90" height="20" stroke="#333" stroke-width="1.3" />
+				<path
+					d="M10 0 v20 m10 -20 v20 m10 -20 v20 m10 -20 v20 m10 -20 v20 m10 -20 v20 m10 -20 v20 m10 -20 v20"
+					fill="none" stroke="#000" opacity="0.1" stroke-width="1.5" />
+			</g>
+
+			<g id="train-engine">
+				<g fill="#333" stroke="none">
+					<circle cx="6" cy="20" r="3.5" />
+					<circle cx="14" cy="20" r="3.5" />
+					<circle cx="22" cy="20" r="3.5" />
+					<circle cx="68" cy="20" r="3.5" />
+					<circle cx="76" cy="20" r="3.5" />
+					<circle cx="84" cy="20" r="3.5" />
+				</g>
+				<path d="M89.5 1 v 10" fill="none" stroke="#ccc" stroke-width="1" />
+				<circle cx="89.5" cy="1" r="1" stroke="none" fill="#f50" />
+				<path d="M0 2 h50 v-2 h30 l 2 7 l 8 1 v12 h-90 v-18z" stroke="#333" stroke-width="1.3"
+					stroke-linejoin="round" />
+				<g fill="#333" stroke="none">
+					<rect x="72" y="3" width="5" height="5" />
+					<rect x="66" y="3" width="3" height="5" />
+				</g>
+				<path
+					d="M0 12 h93 v8 h-3 M7 12 v8 m11 -8 v8 m11 -8 v8 m11 -8 v8 m11 -8 v8 m11 -8 v8 m11 -8 v8 m11 -8 v8"
+					fill="none" stroke="#000" opacity="0.2" stroke-width="0.75" />
+			</g>
+		</defs>
+		<circle cx="170" cy="-9" r="15" fill="#fe8" stroke="none" />
+		<g id="sound-trees">
+			<use x="44" y="137" xlink:href="#tree-small" />
+			<use x="62" y="139" xlink:href="#tree-small" />
+			<use x="289" y="140" xlink:href="#tree-small" />
+			<use x="315" y="137" xlink:href="#tree-small" />
+			<use x="360" y="139" xlink:href="#tree-small" />
+			<use x="562" y="136" xlink:href="#tree-small" />
+			<use x="630" y="136" xlink:href="#tree-small" />
+			<use x="660" y="138" xlink:href="#tree-small" />
+			<use x="85" y="135" xlink:href="#tree" />
+			<use x="200" y="131" xlink:href="#tree" />
+			<use x="340" y="133" xlink:href="#tree" />
+			<use x="390" y="130" xlink:href="#tree" />
+			<use x="425" y="134" xlink:href="#tree" />
+			<use x="500" y="131" xlink:href="#tree" />
+			<use x="610" y="133" xlink:href="#tree" />
+		</g>
+		<path d="M0 124 h 800" fill="none" stroke="#333" stroke-width="2" />
+		<g id="sound-train">
+			<path d="M140 117 h 10 m90 0 h10 m90 0 h10 m90 0 h10" fill="none" stroke="#333" stroke-width="2" />
+			<use x="50" y="100" xlink:href="#train-freight" fill="#ccc" />
+			<use x="150" y="100" xlink:href="#train-freight" fill="#d85" />
+			<use x="250" y="100" xlink:href="#train-freight" fill="#5b9" />
+			<use x="350" y="100" xlink:href="#train-freight" fill="#dd5" />
+			<use x="450" y="100" xlink:href="#train-engine" fill="#89d" />
+			<circle cx="50" cy="100" r="1" stroke="none" fill="#f50" />
+		</g>
+		<g fill="rgba(0,0,0,0.05)" stroke="#000" stroke-width="1">
+			<circle cx="50" cy="100" r="0" id="sound-left" />
+			<circle cx="540" cy="100" r="0" id="sound-right" />
+		</g>
+	</svg>
+	<div style="margin: 0 auto; max-width: 605px; padding:5px;">
+		<p>
+			<strong>Thought Experiment:</strong> Imagine a train moving at half the speed of <strong>sound</strong>.
+			Whistles at the front and the back of the train blow at the same time.
+		</p>
+
+		<ul class="listing">
+			<li>
+				Where on the train would a passenger hear the whistles simultaneously?
+			</li>
+			<li>
+				Where on the ground would an observer hear the whistles simultaneously?
+			</li>
+		</ul>
+		<details>
+			<summary>results</summary>
+			<ul class="listing">
+				<li>
+					<button type="button" onclick="passengerSound()"
+						style="width:60px;margin-left:38%;">train</button>
+					A train passenger measures the sound from the front of the train as moving faster, and the sound
+					from the back as moving slower.
+				</li>
+				<li>
+					<button type="button" onclick="observerSound()"
+						style="width:65px;margin-left:38%;">ground</button>
+					An observer on the ground measures both sound waves moving at the same speed, but the train is
+					moving to the right.
+				</li>
+			</ul>
+			<p>
+				Both frames of reference agree that the sound waves meet towards the back of the train.
+			</p>
+		</details>
+	</div>
+</div>
+<article>
+
+	<h2 class='underlined' id="speed">A Constant Speed of Light</h2>
+	<p>
+		Waves are a disruption that propagates through a medium. The speed of a wave is constant and determined by
+		the medium.
+		Sound's medium is atoms. Light's medium is electric and magnetic fields.
+	</p>
+	<p>
+		<strong>Light</strong> is different from other waves.
+		It moves faster than any known object, and it is able to propagate through the vacuum of space.
+
+		How can a wave exist in seemingly empty space?
+		Is space filled with a medium? What is the velocity of that medium relative to Earth?
+	</p>
+	<p>
+		In 1887, scientists Albert A. Michelson and Edward W. Morley developed an <a
+			href="https://www.youtube.com/watch?v=M3GQM7tuq2w">experiment (How Luminiferous Aether Led to Relativity
+			by PBS)</a>
+		to learn about the relative velocity between the Earth and light's medium, electromagnetic fields.
+	</p>
+
+	<a href="https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment">
+		<img src="Morley_experiment.png" alt="Morley_experiment">
+	</a>
+
+
+	<p>
+		Michelson and Morley <strong>split</strong>
+		a beam of light into two perpendicular paths. These separate beams reflected off mirrors to recombine again
+		at the splitter.
+		By looking at the interference pattern of the combined beams, they could tell with a high accuracy if either
+		path took less time.
+	</p>
+	<p><a
+			href="http://galileoandeinstein.physics.virginia.edu/more_stuff/Applets/MichelsonMorley/michelsonmorley.html">Click
+			here to perform the experiment</a></p>
+	<p>
+		They tested at different times of day and year to measure the effect of Earth's relative velocity on the
+		speed of light.
+		They always measured a constant speed of light in every direction. Earth's motion had no effect.
+	</p>
+	<div class="definition">
+		<h1>$$c = 3 \times 10^8 \, \mathrm{\tfrac{m}{s}} $$</h1>
+		<p>
+			All observers measure the speed of light as the same value even when moving at a relative velocity.
+		</p>
+		<!-- <p>Constant for all observers at any relative velocity.</p> -->
+	</div>
+	<p>
+		It seems like a constant speed of light for all observers leads to a paradox.
+		How can two observers moving relative to each other both see the speed of something as the same?
+	</p>
+</article>
+<div class='example' id="train-2" style="margin: auto;">
+	<svg viewBox="30 -25 540 149">
+		<circle cx="105" cy="23" r="17" fill="#fcb" stroke="none" />
+		<!-- <circle cx="73" cy="70" r="20" fill="#fba" stroke="none" /> -->
+		<g id="trees">
+			<use x="44" y="137" xlink:href="#tree-small" />
+			<use x="62" y="139" xlink:href="#tree-small" />
+			<use x="289" y="140" xlink:href="#tree-small" />
+			<use x="315" y="137" xlink:href="#tree-small" />
+			<use x="360" y="139" xlink:href="#tree-small" />
+			<use x="562" y="136" xlink:href="#tree-small" />
+			<use x="630" y="136" xlink:href="#tree-small" />
+			<use x="660" y="138" xlink:href="#tree-small" />
+			<use x="85" y="135" xlink:href="#tree" />
+			<use x="200" y="131" xlink:href="#tree" />
+			<use x="340" y="133" xlink:href="#tree" />
+			<use x="390" y="130" xlink:href="#tree" />
+			<use x="425" y="134" xlink:href="#tree" />
+			<use x="500" y="131" xlink:href="#tree" />
+			<use x="610" y="133" xlink:href="#tree" />
+		</g>
+		<path d="M0 124 h 800" fill="none" stroke="#333" stroke-width="2" />
+		<g id="train">
+			<path d="M140 117 h 10 m90 0 h10 m90 0 h10 m90 0 h10" fill="none" stroke="#333" stroke-width="2" />
+			<use x="50" y="100" xlink:href="#train-freight" fill="#89d" />
+			<use x="150" y="100" xlink:href="#train-freight" fill="#5b9" />
+			<use x="250" y="100" xlink:href="#train-freight" fill="#d85" />
+			<use x="350" y="100" xlink:href="#train-freight" fill="#dd5" />
+			<use x="450" y="100" xlink:href="#train-engine" fill="#ccc" />
+			<circle cx="50" cy="100" r="1" stroke="none" fill="#f50" />
+		</g>
+		<g fill="rgba(255,255,0,0.1)" stroke="#000" stroke-width="1">
+			<circle cx="50" cy="100" r="0" id="light-left" />
+			<circle cx="540" cy="100" r="0" id="light-right" />
+		</g>
+	</svg>
+	<div style="margin: 0 auto; max-width: 605px; padding:5px;">
+		<p>
+			<strong>Thought Experiment:</strong>
+			Imagine a train moving at half the speed of <strong>light</strong>.
+			Imagine lights on the front and back of the train flash simultaneously for both observers.
+		</p>
+		<!-- &nbsp;&nbsp;&nbsp; <strong>(back,&nbsp;&nbsp;&nbsp;&nbsp;middle,&nbsp;&nbsp;&nbsp;&nbsp;front)</strong> -->
+		<ul class="listing">
+			<li>
+				Where would a passenger on the train see the lights flash at the same time?
+			</li>
+			<li>
+				Where would a ground based observer see the lights flash at the same time?
+			</li>
+		</ul>
+		<details>
+			<summary>results</summary>
+			<ul class="listing">
+				<li>
+					<button type="button" onclick="passenger()" style="width:60px;margin-left:38%;">train</button>
+					The train isn't moving from the passenger's frame of reference. This means they see the light
+					meet in the middle of the train.
+				</li>
+				<li>
+					<button type="button" onclick="observer()" style="width:65px;margin-left:38%;">ground</button>
+					A frame of reference on the ground sees the train moving to the right.
+					They see the light waves meet closer to the back of the train.
+				</li>
+			</ul>
+			<p>
+				The frames of reference don't agree on the location and timing of events.
+				This happens when two frames of reference have a relative velocity between them.
+				<strong>These contradictory results indicate there is a problem with our model of physics.</strong>
+			</p>
+		</details>
+	</div>
+</div>
+<article>
+	<h2 class='underlined' id="specialrelativity">Special Relativity</h2>
+	<p>
+		The Michelson-Morley experiment and a few other experiments indicated that there was a problem with our
+		understanding of relative velocity and light.
+	</p>
+	<p>
+		In 1905 Albert Einstein published his answer to the problem. He suggested special relativity as a
+		modification of the laws of physics to take into account a constant speed of light. Special relativity
+		suggests that space and time change for different observers in a way that keeps the speed of light constant.
+	</p>
+	<p> Special relativity is based on two postulates:
+		<br> 1. The laws of physics are the same in all reference frames.
+		<br> 2. Light moves at the same speed for all observers.
+	<p>
+		Special relativity predicts that observers moving at a relative velocity to each other don't agree on the:
+		<li>order of events (simultaneity)</li>
+		<li>passage of time (time dilation)</li>
+		<li>length of objects (length contraction)</li>
+		<li>mass of objects (mass–energy equivalence)</li>
+	</p>
+
+	<p>
+		Because of the high speeds needed, special relativity is difficult to observe, but so far all <a
+			href="https://en.wikipedia.org/wiki/Tests_of_special_relativity">tests</a> support the theory to a high
+		degree of precision.
+	</p>
+	<p>For more on special relativity, check out this <a
+			href="https://www.lucify.com/inside-einsteins-head/">explorable explanation</a>.</p>
+	<br>
+	<br>
+	<br>
+</article>
+<canvas class='center' id="special" width='600' height='400' style="background: #111; border-radius: 0px;"></canvas>
+<article>
+	<p>
+		Here is a relative velocity simulation with time dilation and length contraction. Move the mouse vertically
+		to change observers.
+	</p>
+	
+	<div class='example'>
+		<strong>Question:</strong> Are the predictions of special relativity 'real' or an 'illusion' that only
+		affects how an observer sees things?
+		<details>
+			<summary>solution</summary>
+			<p>
+				Effects like time dilation and length contraction have real consequences that all observers can
+				agree on. Time dilation can produce real differences in the ages of objects. (see <a
+					href="https://www.youtube.com/watch?v=ERgwVm9qWKA">twin paradox</a>)
+			</p>
+		</details>
+	</div>
+
+	<div class='example'>
+		<strong>Question:</strong> Does special relativity mean time travel might be possible one day?
+		<details>
+			<summary>answer</summary>
+			<h3>YES! <span style="font-size: 10px;">and no</span></h3>
+			<p>
+				You can already go <strong>forwards</strong> in time by just waiting, but you will get old.
+			</p>
+			<p>
+				If you have a velocity near the speed of light relative to the Earth, you will age slow as the Earth
+				ages fast. You could use this to see the far future, but right now we don't have a safe way to get a
+				person up to relativistic speeds.
+			</p>
+			<p>
+				It is probably impossible to go <strong>backwards</strong> in time, but the equations don't
+				completely rule it out.
+			</p>
+		</details>
+	</div>
+
+</article>
+<div class='example' id="train-3" style="margin: auto;">
+	<svg viewBox="30 -25 590 149">
+		<circle id="sunset" cx="73" cy="70" r="20" fill="#fa9" stroke="none" />
+		<g id="length-trees" transform="scale(0.866,1)">
+			<use x="44" y="137" xlink:href="#tree-small" />
+			<use x="62" y="139" xlink:href="#tree-small" />
+			<use x="289" y="140" xlink:href="#tree-small" />
+			<use x="315" y="137" xlink:href="#tree-small" />
+			<use x="360" y="139" xlink:href="#tree-small" />
+			<use x="384" y="136" xlink:href="#tree-small" />
+			<use x="562" y="136" xlink:href="#tree-small" />
+			<use x="590" y="139" xlink:href="#tree-small" />
+			<use x="647" y="136" xlink:href="#tree-small" />
+			<use x="660" y="138" xlink:href="#tree-small" />
+			<use x="760" y="138" xlink:href="#tree-small" />
+			<use x="790" y="137" xlink:href="#tree-small" />
+			<use x="820" y="136" xlink:href="#tree-small" />
+
+			<use x="85" y="135" xlink:href="#tree" />
+			<use x="200" y="131" xlink:href="#tree" />
+			<use x="340" y="133" xlink:href="#tree" />
+			<use x="390" y="130" xlink:href="#tree" />
+			<use x="425" y="134" xlink:href="#tree" />
+			<use x="500" y="131" xlink:href="#tree" />
+			<use x="535" y="133" xlink:href="#tree" />
+			<use x="725" y="131" xlink:href="#tree" />
+			<use x="833" y="131" xlink:href="#tree" />
+		</g>
+		<path d="M0 124 h 800" fill="none" stroke="#333" stroke-width="2" />
+		<g id="length-train">
+			<path d="M140 117 h 10 m90 0 h10 m90 0 h10 m90 0 h10" fill="none" stroke="#333" stroke-width="2" />
+			<use x="50" y="100" xlink:href="#train-freight" fill="#ccc" />
+			<use x="150" y="100" xlink:href="#train-freight" fill="#d85" />
+			<use x="250" y="100" xlink:href="#train-freight" fill="#89d" />
+			<use x="350" y="100" xlink:href="#train-freight" fill="#dd5" />
+			<use x="450" y="100" xlink:href="#train-engine" fill="#5b9" />
+			<circle cx="50" cy="100" r="1" stroke="none" fill="#f50" />
+		</g>
+		<g fill="rgba(255,255,0,0.1)" stroke="#333" stroke-width="1">
+			<circle cx="50" cy="100" r="0" id="length-left" />
+			<circle cx="540" cy="100" r="0" id="length-right" />
+		</g>
+	</svg>
+	<div style="margin: 0 auto; max-width: 605px; padding:5px;">
+		<p>
+			<strong>Thought Experiment:</strong> Remember the <a href="#train-2">train paradox</a>?
+			The ground based frame of reference and the train based frame of reference disagreed on where the
+			flashes of light met.
+			Special relativity removes this inconsistency by not letting different frames agree on simultaneity.
+		</p>
+		<style>
+			.center-flex {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+			}
+		</style>
+		<div class="center-flex">
+			<button type="button" onclick="passengerLength()" style="width:60px;">train</button>
+			<button type="button" onclick="observerLength()" style="width:65px;">ground</button>
+		</div>
+		<!-- 
+		<ul class="listing">
+			<li>
+
+			</li>
+			<li>
+
+			</li>
+		</ul> -->
+		<p>
+			It is only possible for the light flashes to be simultaneous for one of the observers.
+			If the flashes occur at the same time for the train observer, the ground observer will see the flashes
+			at different times.
+		</p>
+		<br>
+		<strong>Question:</strong> What relativistic effects can you observe in the the simulation.
+		<details>
+			<summary>answer</summary>
+			<p>
+				simultaneity and length contraction
+			</p>
+			<p>
+				The trees are narrow from the train's reference frame.
+				The train is shorter from the ground's reference frame.
+			</p>
+			<p>Time dilation should also be present, but there isn't a way to see it in the simulation.</p>
+		</details>
+	</div>
+</div>
+<article>
+
+	<h2 class='underlined'>Lorentz factor</h2>
+	<p>
+		These equations predict how observers in two non-accelerating reference frames can disagree on space and
+		time if they have a relative velocity.
+	</p>
+	$$ \Delta t = \gamma \Delta t_0 \quad \quad \quad \quad L = \frac{L_0}{\gamma}$$
+	<p>
+		Before we can solve these equations, we need to calculate the <strong>Lorentz factor</strong>, written as Ɣ
+		(gamma).
+		The Lorentz factor is used in special relativity equations to scale how different reference frames measure
+		space and time.
+	</p>
+	<div class="definition">
+		<h1>$$ \gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2} } }$$</h1>
+		\( \gamma \) = Lorentz factor, gamma [no units]
+		<br>\(v\) = relative velocity [m/s]
+		<br>\(c\) = speed of light, 3 × 10⁸ [m/s]
+	</div>
+	<p>The Lorentz factor is always greater than 1, but it grows towards infinity as the relative velocity
+		approaches the speed of light.</p>
+
+	<p>At a low relative velocity, the effects of special relativity aren't noticeable because the Lorentz factor is
+		one. As the relative speed approaches the speed of light, the Lorentz factor increases towards infinity.</p>
+	<img src="Lorentz-factor.png" alt=" Lorentz factor">
+	<br>
+
+
+	<strong>Practice Problems</strong>
+	<p>1. Calculate the Lorentz factor for two reference frames at rest relative to each other.</p>
+	<p>2. Calculate the Lorentz factor for two reference frames moving at half the speed of light relative to each
+		other.</p>
+	<p>3. Calculate the Lorentz factor for two reference frames moving at 0.99c relative to each other.</p>
+	<p>4. Calculate the Lorentz factor for two reference frames moving at the speed of light relative to each other.
+	</p>
+
+
+
+	<h2 class='underlined'>Time Dilation</h2>
+	<p>Time dilation is amazing because it disagrees with our natural intuition. Be careful when solving these
+		problems. Keep a clear idea of the observer and their velocity relative to the events.</p>
+
+	<p>
+		To understand where the time dilation equation comes from we will explore a <a
+			href="https://en.wikipedia.org/wiki/Time_dilation#Simple_inference_of_velocity_time_dilation">hypothetical
+			situation</a>. Imagine <a
+			href="http://galileoandeinstein.physics.virginia.edu/more_stuff/Applets/Lightclock/home.html">light
+			clocks</a> that work by firing light at a mirror and measuring the time for the light to return.
+		Each light clock's path is marked in blue.
+	</p>
+
+	<div class="definition">
+		<h1>$$ \Delta t = \gamma \Delta t_0$$</h1>
+		\(\Delta t\) = elapsed time for an observer in a frame of reference where the events occur in
+		<strong>different</strong> locations
+		<br> <br> \(\Delta t_0\) = elapsed time for an observer in a frame of reference where the events occur in
+		the <strong>same</strong> location, <strong>proper time</strong>
+		<br> <br>\( \gamma \) = Lorentz factor, gamma [no units]
+	</div>
+	<p>Gamma must be greater than one. This means that \(\Delta t> \Delta t_0\).</p>
+
+	<strong>Important</strong>
+	<p>
+		<a href="https://www.youtube.com/watch?v=rVzDP8SMhPo">Muons</a> are elementary particles similar to
+		electrons, but more massive.
+		Muons are produced in Earth's upper atmosphere by <a
+			href="https://www.youtube.com/watch?v=400xfGmSlqQ">cosmic rays</a>, but they have a half-life of 2.2
+		microseconds.
+		This means after 0.0000022 seconds half of a population of muons will decay into other particles.
+	</p>
+
+
+	<h2 class='underlined'>Length Contraction</h2>
+	<p>Length contraction only occurs in the direction of the relative velocity. Objects don't look smaller; they
+		look shorter.</p>
+	<div class="definition">
+		<p>An observer sees lengths contracted along the relative velocity.</p>
+		<h1>$$ L = \frac{L_0}{\gamma}$$</h1>
+		\( L\) =
+		<strong>contracted length</strong>, as seen from a relative velocity
+		<br>\( L_0\) =
+		<strong>rest length</strong>, as seen from its own rest frame
+
+		<br>\( \gamma \) = Lorentz factor, gamma [no units]
+	</div>
+	<p>The rest length is always longer. An object will look contracted from a moving reference frame. </p>
+
+
+
+
+
+	<h2 class='underlined' id="twin-paradox">Twin Paradox</h2>
+	<p>
+		Imagine there is a pair of twins names Apollo and Artemis.
+		On the day they are born Artemis is taken to a spaceship destined for Alpha Centauri 4.37 light-years away.
+		The spaceship travels at 0.8c.
+		Meanwhile, Apollo lives a normal life on Earth.
+	</p>
+
+
+	<h2 class='underlined' id="mass-energy">Mass and Energy</h2>
+	<p>
+		One of the implications of special relativity is that mass is a type of energy.
+		Mass is not the same as energy. Mass is a type of energy, just like how kinetic and gravitational potential
+		are types of energy.
+	</p>
+	<p>
+		We originally thought that mass produced gravity and had inertia.
+		We now know that all types of energy have these properties,
+		although it does take a large amount of energy to measure them.
+	</p>
+	<p>
+		If you add kinetic energy to an object it will have more gravity and more inertia.
+		This also means that objects with no mass, like light, have inertia and gravity.
+	</p>
+	<p>
+		Oddly enough most of the energy of an atom is not in the mass of the particles in the atom.
+		It comes from the binding energy of the strong nuclear force that keeps the quarks together.
+	</p>
+	<div class="definition">
+		<h1>$$ E = \gamma mc^2$$ </h1>
+		\( E\) = Energy [J]
+		<br>\( \gamma \) = Lorentz factor, gamma [no units]
+		<br>\( m \) = mass [kg]
+		<br>\(c\) = speed of light, 3 × 10⁸ [m/s]
+	</div>
+	<p>
+		At rest, the Lorentz factor is one.
+		This gives us Einstein's famous equation for mass-energy equivalence at rest.
+	</p>
+	$$E = mc^2$$
+
+	<p>
+		Light has energy, so it produces and is affected by gravity.
+		Of course, we don't normally need to include the energy of light in our calculates of gravity.
+	</p>
+	<p>
+		Inertia and gravity calculations are more accurate if the total energy is used.
+		For example, increasing the temperature of an body will cause it to produce slightly more gravity.
+	</p>
+
+
+	<!-- block -->
+
+
+	<h2 class='underlined' id="solver">Lorentz Transformation Solver</h2>
+	<br>
+	<ul class="listing">
+		<li>
+			<div>Relative Velocity
+				<br>v = <input id='velocity' type="number" value='0.9' min="0" max="1" step="0.01"
+					style="width:80px;"> c
+				<br>v = <input id='velocity2' type="number" value='2.7' min="0" max="3" step="0.1"
+					style="width:80px;"> × 10<sup>8</sup> m/s
+			</div>
+		</li>
+		<li>
+			<div>Lorentz Factor
+				<br>γ = <input id='gamma' type="number" value='2.2942' min="1" step="0.1" max="9999999"
+					style="width:80px;">
+			</div>
+		</li>
+		<li>
+			<div>
+				<strong>MOVING RELATIVE TO SPACESHIP</strong>
+				<br>time = <input id='v_time' type="number" value='22.94' min="0" max="1000.0" style="width:80px;">
+				s
+				<br>energy = <input id='v_mass' type="number" value='22.94' min="0" min="-1000.0" max="1000.0"
+					style="width:80px;"> J
+				<br>length = <input id='v_length' type="number" value='4.36' min="0" min="-1000.0" max="1000.0"
+					style="width:80px;"> m
+			</div>
+		</li>
+		<li>
+			<div>
+				<strong>AT REST RELATIVE TO SPACESHIP</strong>
+				<br>proper time = <input id='time' type="number" value='10' min="0" max="1000.0"
+					style="width:80px;"> s
+				<br>rest energy = <input id='mass' type="number" value='10' min="0" min="-1000.0" max="1000.0"
+					style="width:80px;"> J
+				<br>rest length = <input id='length' type="number" value='10' min="0" min="-1000.0" max="1000.0"
+					style="width:80px;"> m
+			</div>
+		</li>
+	</ul>
+	<canvas id="rockets" width='600' height='150' style="box-shadow: 0px 0px 0px #aaa;"></canvas>
+	<ul class="listing" style="font-size: 0.9rem">
+		<li>
+			<em>Frame of reference where an observer sees the spaceship in different locations.</em>
+		</li>
+		<li>
+			<em>Frame of reference where an observer sees the spaceship in the same location.</em>
+		</li>
+	</ul>
+	<br><br><br><br><br><br>
+
+
+</article>
+
+<script>
+	renderMathInElement(document.body);
+</script>
+<script src="solver.js"></script>
+<script src="train.js"></script>
+<!-- Special Relativity end -->
+
+</body>
+
+</html>

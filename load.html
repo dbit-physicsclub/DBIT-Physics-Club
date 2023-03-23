@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader:after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 6px solid #3498db;
+            border-top-color: transparent;
+            animation: loader-rotate 1s ease-in-out infinite;
+        }
+
+        @keyframes loader-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="hideLoader()">
+    <div class="loader"></div>
+    <div class="content">
+        hello loader
+    </div>
+</body>
+
+<script>
+    function hideLoader() {
+	setTimeout(function() {
+		document.querySelector('.loader').style.display = 'none';
+		document.querySelector('.content').style.display = 'block';
+	}, 2000); // change the value (in milliseconds) to adjust the delay before the loader hides
+}
+
+</script>
+</html>

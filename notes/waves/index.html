@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<title>Waves</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- this three tage are to support LaTeX synstax-->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+		integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+		integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+		crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+		integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+
+	<!-- LaTeX-->
+
+</head>
+
+<body>
+	<!--navbar -->
+
+	<nav class="nav-bar" id="header">
+		<div class="logo">
+			<a href="../../home.html"><img src="../../Img/DBIT.png"  alt=""><b>DON BOSCO</b> <span>Institute of Technology</span></a>
+			|
+			<a href=""><img src="../Img/logowhite.jpg" alt="">
+		</div>
+
+	</nav>
+
+	<!--navbar -->
+	<header>
+		<h1>
+			<a>Waves</a>
+		</h1>
+	</header>
+
+	<article>
+		<p>
+			Physics uses basic models to simplify complex systems.
+			A common model is the particle.
+			<strong>Particles</strong> are point-like objects with no internal structure, just properties like mass and
+			velocity.
+			More complicated properties like rotation, and friction are often ignored.
+			We've used the particle model to understand phenomena like:
+			momentum, gravitation, Coulomb's law,and current <br>
+			The model of a particle can be applied to things like electrons, gases, or stars.
+		</p>
+		<p>
+			Another commonly used model is the <strong>wave</strong>.
+			Waves are different from the particle model in some interesting ways.
+			They don't exist at a point. They spread out in every direction at a constant speed.
+			They have zero mass, and they can overlap with each other without interacting.
+		</p>
+	</article>
+
+	<article>
+		<p>
+			A wave is produced when a medium is disrupted.
+			The wave is the disruption spreading through the medium.
+		</p>
+		<p>
+			The nature of each medium gives waves different properties.
+			If you throw a pebble into a pond you see a wave spread out along the surface of the water.
+			When a tree falls in the forest you can hear the sound waves spread out through the air.
+			When you look at the sky you see electro-magnetic waves made by stars.
+		</p>
+
+		<table  class ="table" cellpadding="5" cellspacing="1" >
+			<tr>
+				<th>wave</th>
+				<th>medium</th>
+				<th>examples</th>
+			</tr>
+			<tr>
+				<td>sound</td>
+				<td>matter (any phase)</td>
+				<td>talking, music</td>
+			</tr>
+			<tr>
+				<td>light</td>
+				<td>electro-magnetic fields</td>
+				<td>sunlight, Wi-Fi, X-Rays</td>
+			</tr>
+			<tr>
+				<td>surface</td>
+				<td>interface between two media</td>
+				<td>ocean waves, ripples</td>
+			</tr>
+			<tr>
+				<td>string</td>
+				<td>strings, ropes</td>
+				<td><a href="https://www.youtube.com/watch?v=AnaASTBn_K4" style="color:black">whip</a>, guitar string</td>
+			</tr>
+			<tr>
+				<td>seismic</td>
+				<td>solids</td>
+				<td><a href="https://www.youtube.com/watch?v=en4HptC0mQ4"style="color:black" >S</a> and <a
+						href="https://www.youtube.com/watch?v=2rYjlVPU9U4"style="color:black">P</a> waves</td>
+			</tr>
+			<tr>
+				<td>electrical</td>
+				<td>conductors</td>
+				<td>cable TV, phone lines</td>
+			</tr>
+			<tr>
+				<td>gravitational</td>
+				<td>spacetime</td>
+				<td>LIGO, Virgo</td>
+			</tr>
+			<tr>
+				<td>traffic</td>
+				<td>cars on a road</td>
+				<td><a href="https://www.youtube.com/watch?v=6ZC9h8jgSj4"style="color:black">ripples of slow traffic</a></td>
+			</tr>
+			<tr>
+				<td>audience</td>
+				<td>stadium of people</td>
+				<td><a href="https://www.youtube.com/watch?v=hq387m0PRac"style="color:black">The</a> <a
+						href="https://www.youtube.com/watch?v=dU2rLhpaMAY"style="color:black">Wave</a> </td>
+			</tr>
+		</table>
+
+
+		<h2 class='underlined'>Media and Wave Speed</h2>
+		<p>
+			When a wave propagates, what is moving is energy, not matter.
+			The speed of propagation is determined by the medium.
+			Properties like frequency, amplitude, or wavelength generally don't affect the speed.
+		</p>
+		<div class='example-small'>
+			<div class='definition'>
+				<style>
+					.def-underlined {
+						text-decoration: underline;
+					}
+
+					.def-underlined:hover {
+						color: #f05;
+						fill: #f05;
+					}
+				</style>
+				<p>
+					A wave is a disturbance that propagates through a medium.
+				</p>
+				<br>
+				<!-- strech, vertical -->
+
+				<svg viewBox="-300 100 1800 550">
+					<g stroke-width='3' fill="none" stroke="#678">
+						<path d='M804 362 h10 h-20 h10 v-200 h10 h-20' />
+						<path d='M195 400 v10 v-20 v10 h605 v10 v-20' />
+						<path d="M170 375 h780" stroke-dasharray="19, 20" stroke="#9ab" />
+					</g>
+					<path d="M60,329 L69,308 L78,287 L87,267 L97,248 L106,230 L115,213 L124,198 L134,185 L143,173 L152,163
+						L162,154 L171,148 L180,144 L189,142 L199,142 L208,144 L217,148 L226,154 L236,163 L245,173 L254,185 L264,198 L273,213 L282,230
+						L291,248 L301,267 L310,287 L319,308 L328,329 L338,351 L347,373 L356,395 L366,417 L375,438 L384,459 L393,479 L403,498 L412,516
+						L421,533 L430,548 L440,561 L449,573 L458,583 L468,592 L477,598 L486,602 L495,604 L505,604 L514,602 L523,598 L532,592 L542,583
+						L551,573 L560,561 L570,548 L579,533 L588,516 L597,498 L607,479 L616,459 L625,438 L634,417 L644,395 L653,373 L662,351 L672,329
+						L681,308 L690,287 L699,267 L709,248 L718,230 L727,213 L736,198 L746,185 L755,173 L764,163 L774,154 L783,148 L792,144 L801,142
+						L811,142 L820,144 L829,148 L838,154 L848,163 L857,173 L866,185 L876,198 L885,213 L894,230 L903,248 L913,267 L922,287 L931,308
+						L940,329 L950,351 L959,373 " stroke-width='20' fill='none' stroke='#234' stroke-linecap="round" />
+
+					<g fill='#fff' stroke="none">
+						<circle cx="193" cy="142" r="10" />
+						<circle cx="500" cy="604" r="10" />
+					</g>
+					<g fill='#333' font-size="32" text-anchor="middle">
+						<text x="190" y="120" id="def-crest" class="def-underlined">crest</text>
+						<text x="500" y="643" id="def-trough" class="def-underlined">trough</text>
+						<text x="800" y="120" id="def-amplitude" class="def-underlined">amplitude</text>
+						<text x="500" y="430" id="def-wavelength" class="def-underlined">wavelength</text>
+						<text x="0" y="383" id="def-equilibrium" text-anchor="start"
+							class="def-underlined">equilibrium</text>
+					</g>
+
+				</svg>
+
+				<p id="def-definition"
+					style="background-color: rgb(246, 135, 135); border-radius: 10px; padding:0.5em 20em; margin: 20px;">
+					Click the
+					<span class="def-underlined" id="def-underlined">underlined</span> words for their definition.
+				</p>
+
+				<script>
+					const el = document.getElementById("def-definition")
+					document.getElementById("def-crest").addEventListener("click", () => {
+						el.innerHTML = "<strong>Crest</strong> = high point on a wave"
+					});
+					document.getElementById("def-trough").addEventListener("click", () => {
+						el.innerHTML = "<strong>Trough</strong> = low point on a wave"
+					});
+					document.getElementById("def-amplitude").addEventListener("click", () => {
+						el.innerHTML = "<strong>Amplitude</strong> = maximum displacement from equilibrium (m)"
+					});
+					document.getElementById("def-wavelength").addEventListener("click", () => {
+						el.innerHTML = "<strong>Wavelength, λ</strong> = distance over which a wave's shape repeats [m]"
+					});
+					document.getElementById("def-equilibrium").addEventListener("click", () => {
+						el.innerHTML = "<strong>Equilibrium</strong> = resting state of a medium"
+					});
+					document.getElementById("def-medium").addEventListener("click", () => {
+						el.innerHTML = "<strong>Medium</strong> = substance that carries the wave"
+					});
+					document.getElementById("def-propagates").addEventListener("click", () => {
+						el.innerHTML = "<strong>Propagate</strong> = transmit through the medium, how waves move"
+					});
+					document.getElementById("def-underlined").addEventListener("click", () => {
+						el.innerHTML = "<strong>Underline</strong> = draw a line under (a word or phrase) to give emphasis or indicate special type."
+					});
+				</script>
+			</div>
+
+		</div>
+		<p>Each type of wave has a different mechanism of propagation. The speed and possibility of a wave propagating
+			through a medium is different for each wave type.</p>
+		<table class= "table" cellpadding="5" cellspacing="1">
+
+			<tr>
+				<th>speed (m/s)</th>
+				<th>vacuum</th>
+				<th>air</th>
+				<th>water</th>
+				<th>glass</th>
+			</tr>
+			<tr>
+				<td>sound</td>
+				<td>N/A</td>
+				<td>340</td>
+				<td>1484</td>
+				<td>4540</td>
+			</tr>
+			<tr>
+				<td>light</td>
+				<td>299 792 458</td>
+				<td>299 700 000</td>
+				<td>225 000 000</td>
+				<td>200 000 000</td>
+			</tr>
+		</table>
+		<p>
+			<a href="https://www.youtube.com/watch?v=px3oVGXr4mo" style="color:black">Sound</a> travels faster in dense media because the
+			atoms are <a href='https://www.youtube.com/watch?v=w6Q15GZpSUY' style="color:black">closer</a> together. This means the atoms
+			don't have to move as far to collide.
+		</p>
+
+		<p>
+			A light wave is slower in dense media because as the light wave propagates through a medium it produces
+			ripples that interfere in a way that slows the group velocity of the light wave.
+		</p>
+
+
+
+
+		<div class='example'>
+			<strong>Think and analyse</strong> <br>
+			<strong>Example:</strong> Two students are holding a slinky while standing 3.6 m apart. The first student
+			sends a pulse which travels all the way down and back again. It takes 2.4 s for the wave to return. What is
+			the speed of the wave?
+			<details>
+				<summary>solution</summary>
+				<p>v = Δx/Δt</p>
+				<p>v = (3.6m x 2) / 2.4s</p>
+				<p>v = 3 m/s</p>
+			</details>
+		</div>
+		<div class='example'>
+			<strong>Investigation:</strong> Can you figure out what factors affect the speed of a string wave? Go
+			experiment with a string, or slinky to find out.
+			<details>
+				<summary>results</summary>
+				<br> Tension is probably the easiest way to control the speed of a string wave. The equation below shows
+				that string mass and length are also factors.
+				$$ v = \sqrt{\frac{T}{\tfrac{m}{L}}}$$
+				<div class="col-group ">
+					<div class='center'>
+						v = velocity (m/s)
+						<br>T = tension (N)
+					</div>
+					<div class='center'>
+						m = mass (kg)
+						<br>L = string length (m)
+					</div>
+				</div>
+				<p>Changing wave speed is used to change the pitch of stringed instruments. Notes from a guitar or harp
+					are changed through tension, length, or string mass.</p>
+			</details>
+		</div>
+
+		<h2 class='underlined' id='sound-waves'>How Waves Propagates ?</h2>
+		<p>
+			<strong>Propagate</strong> is the word we use to describe waves moving. We try not to say move, because
+			waves are a disturbance transmitting through the medium. The medium doesn't move. Each medium has their own
+			mechanism of propagation, but they share some common principles.
+		</p>
+		<p>Each medium has their own mechanism of propagation, but there are some general principles.
+			<li>A medium is brought out of equilibrium by a disruption.</li>
+			<li>The medium is brought back to equilibrium by a restorative force.</li>
+			<li>The restorative force also pushes the disruptions forward through the medium.</li>
+		</p>
+		<p>
+			A medium at rest is in <strong>equilibrium</strong>; the forces are in balance. A disruption spreads through
+			a medium bringing it out of equilibrium.
+		</p>
+		<p>
+			<a href="https://waveforms.surge.sh/waveforms-intro ">Sound waves</a> are vibrations that propagate through
+			matter. They are produced by changes in pressure and velocity. Your <a
+				href="https://www.youtube.com/watch?v=qgdqp-oPb1Q ">ear</a> senses the amplitude and frequency of the
+			vibrations.
+		</p>
+		<br><br>
+		<p>
+			A disturbance that produces one or only a few waves is called a <strong>pulse</strong>.
+		</p>
+	</article>
+
+
+	<article>
+		<p>
+			Waves don't transmit matter, just energy. In the simulation above one particle is highlighted. Watch how it
+			<a href="https://en.wikipedia.org/wiki/Oscillation">oscillates</a> when it becomes part of the wave, but
+			over time it stays in the same area.
+
+			Sound waves oscillate parallel to propagation, but most waves oscillate <a
+				href="https://www.acs.psu.edu/drussell/demos/waves/wavemotion.html">perpendicular</a> to propagation.
+		</p>
+		<div class="example-small">
+			<p>
+				<strong>Longitudinal Wave</strong> = The medium oscillates parallel to the direction of wave
+				propagation.
+				<br>Examples: sound, slinky
+			</p>
+			<p>
+				<strong>Transverse Wave</strong> = The medium oscillates perpendicular to the direction of wave
+				propagation.
+				<br>Examples: light, string, slinky, sound (in solids), gravity
+			</p>
+
+			<div class="centerlab"><a
+					href="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html"
+					style="text-decoration: none;"><img
+						src="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string-600.png"
+						alt="Wave on a String" style="border: none;" width="300" height="200" />
+					<div
+						style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity: 0.6; filter: alpha(opacity = 60);">
+					</div>
+					<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+						<tr>
+							<td
+								style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+								Click to Run</td>
+						</tr>
+					</table>
+				</a>
+			</div>
+		</div>
+		<br>
+
+		<h2 class='underlined'>Periodic Waves</h2>
+		<p>
+			Waves that repeat are called <strong>periodic</strong>.
+			Periodic waves have these measurable properties.
+		</p>
+		<p>
+			<strong>Period, T</strong> = time for one complete wave cycle to pass a point [s]
+			<br>
+			<strong>Frequency, f</strong> = number of cycles that pass per second [Hz, 1/s]
+			<br>
+			<strong>Wavelength, λ</strong> = distance over which a wave's shape repeats [m]
+		</p>
+		<p>Waves can have different shapes. The waveform below is a
+			<select id="waveform-select">
+				<option value="sine">sine</option>
+				<option value="square">square</option>
+				<option value="triangle">triangle</option>
+				<option value="sawtooth">sawtooth</option>
+			</select> wave.
+		</p>
+	</article>
+	<div id="sine-wave-zone">
+		<div class="flex-grid-thirds">
+			<div class="col">
+				<li><span class='center'>amplitude =
+					<input id='amplitude' type="number" step="0.05" value="0.6" min="-2" max="2" style="width:50px;">m
+					<br><input id='amplitude-slider' type="range" step="0.01" value="0.6" min="-2" max="2"
+						style="width: 160px;">
+				</span></li>
+			</div>
+			<div class="col">
+				<li><span class='center'>velocity =
+					<input id='velocity' type="number" step="0.1" min="-9.99" max="9.99" value="0.6"
+						style="width:50px;">m/s
+					<br><input id='velocity-slider' type="range" step="0.05" value="0.6" min="-9.99" max="9.99"
+						style="width: 160px;">
+				</span></li>
+			</div>
+			<div class="col">
+				<li><span class='center'>wavelength =
+					<input id='wavelength' type="number" min="0" step="0.2" max="9.99" style="width:50px;">m
+					<br><input id='wavelength-slider' type="range" step="0.1" value="3" min="0.2" max="9.99"
+						style="width: 160px;">
+				</span></li>
+			</div>
+		</div>
+		<div class='center' id='wave_animation'>
+			<svg id='sin-wave' height='400'>
+				<g stroke="#d9dfdf" style="stroke-dasharray:1,98,1,0;stroke-width:4000;">
+					<line x1="0" y1="0" x2="2000" y2="0" />
+					<line x1="0" y1="0" x2="0" y2="2000" />
+				</g>
+				<g stroke-dasharray='10,10' stroke='#777' stroke-width='2'>
+					<line x1="0" y1="200" x2="3000" y2="200" />
+				</g>
+				<path id="wave-form-path" stroke-width='2' fill='none' stroke='#000' stroke-miterlimit="10" />
+				<g>
+					<path d='M3 390 v10 m0 -5 h94 m0 -5 v10' stroke-width='1.5' fill='none' stroke='#000'
+						style='position:absolute;left: 0;right: 0;margin: 0 auto;' />
+					<text x="50" y="391" text-anchor="middle" font-size="15" fill='#000'>1.0 m</text>
+				</g>
+			</svg>
+		</div>
+		<div class="flex-grid-thirds">
+			<div class="col">
+				<span id='frequency' class='center'></span>
+			</div>
+			<div class="col">
+				<span id='time' class='center'></span>
+			</div>
+			<div class="col">
+				<span id='period' class='center'></span>
+			</div>
+		</div>
+	</div>
+	<article>
+		<div class='center' style="position: relative; width: 300px; height: 200px;">
+			<a href="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_en.html"
+				style="text-decoration: none;">
+				<img src="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light-600.png"
+					alt="Bending Light" style="border: none;" width="300" height="200" />
+				<div
+					style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity:										 0.9; filter: alpha(opacity=8 0);">
+				</div>
+				<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+					<tr>
+						<td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+							Click to Run</td>
+					</tr>
+				</table>
+			</a>
+		</div>
+	</article>
+
+	<article>
+		<div class='center' style="position: relative; width: 300px; height: 200px;">
+			<a href="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_en.html"
+				style="text-decoration: none;">
+				<img src="https://phet.colorado.edu/sims/html/bending-light/latest/bending-light-600.png"
+					alt="Bending Light" style="border: none;" width="300" height="200" />
+				<div style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity:
+										 0.9; filter: alpha(opacity=8 0);"></div>
+				<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+					<tr>
+						<td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+							Click to Run</td>
+					</tr>
+				</table>
+			</a>
+		</div>
+	</article>
+
+
+	<!--Light Start	-->
+
+	<header>
+		<h1>
+			<p>The Light</p>
+		</h1>
+	</header>
+	<article>
+		<p>
+			The spectrum of light extends far beyond the visible light that our eyes evolved to detect. Cell phones and
+			Wi-Fi use microwave light to transmit digital information. CT scans use x-ray light to look inside a
+			person's body. Thermometers use infrared light to read temperature. All of these different types of light
+			are produced in the same way.
+		</p>
+
+		<div class="definition">
+			When a charged particle accelerates, its electric field and magnetic field change.
+			This change propagates as a wave in the electro-magnetic field. The wave is light.
+		</div>
+		<p>
+			Changes in an electric and magnetic field don't happen immediately. It takes time for changes in an
+			electromagnetic field to propagate through space. The speed of these changes to the E-M field is the speed
+			of light.
+		</p>
+		<br>
+		<div class="hide-on-mobile">
+
+			<p>The below simulation shows a charge particle that follow your mause. the white line shows the electric
+				field from a charged particle, the ripples in thr field lines are light </p>
+
+			<div class='center' style="position: relative; width: 300px; height: 200px;">
+				<a href="https://warlock.ai/maxwell/" style="text-decoration: none;">
+					<img src="https://github.com/RobinKa/maxwell-simulation/raw/master/images/screenshot_lens.jpg"
+						alt="Color Vision" style="border: none;" width="300" height="200" />
+					<div
+						style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity: 0.9; filter: alpha(opacity = 60);">
+					</div>
+					<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+						<tr>
+							<td
+								style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+								Click to Run</td>
+						</tr>
+					</table>
+				</a>
+			</div>
+
+			<strong><a href="https://github.com/RobinKa/maxwell-simulation.git">Source code here</a></strong>
+			<p>
+				A quick acceleration makes high frequency light. Slow acceleration makes low frequency light. You can't
+				<a href="https://en.wikipedia.org/wiki/Cherenkov_radiation">quite</a> make a "sonic boom" with light
+				because a charged particle can't move faster than the speed that light waves propagate.
+			</p>
+
+		</div>
+
+
+
+		<h2 class='underlined' id="speed-of-light">The Speed of Light</h2>
+		<p>
+			In 1676 <a href="https://en.wikipedia.org/wiki/R%C3%B8mer%27s_determination_of_the_speed_of_light">Ole
+				Rømer</a> estimated that light has a <a href="https://www.youtube.com/watch?v=b9F8Wn4vf5Y">speed</a> by
+			timing the eclipses of Io, one of Jupiter's moons. He found the speed to be around 220&nbsp;000&nbsp;000
+			m/s. This isn't too far from the value we use today.
+		</p>
+		<p>
+			We can use the speed of light as the velocity in the wave equation.
+		</p>
+		<div class='definition'>
+			<h1>$$c = 3.00 \times 10^{8} \small \frac{m}{s}$$ $$c = f \lambda$$</h1>
+			\(c\) = speed of light [m/s]
+			<br>\(f\) = frequency [Hz, 1/s]
+			<br>\(\lambda\) = wavelength [m]
+		</div>
+
+		<p>
+			The speed of light in a vacuum is the fastest possible speed! No object has ever been recorded moving
+			faster. As objects approach the speed of light their time dilates and length contracts.
+		</p>
+
+		<div class="example-small">
+			<p>
+				A light wave moves slower in dense media because light induces electric polarization in matter, and the
+				polarized matter radiates new light that interferes with the original light wave to form a delayed wave.
+			</p>
+			<style>
+				.normal-table tr th {
+					border: 1px solid #fff;
+					background-color: #444;
+					color: #fff;
+				}
+			</style>
+
+			<table class="normal-table">
+				<tr>
+					<th>speed of light</th>
+					<th>vacuum</th>
+					<th>air</th>
+					<th>water</th>
+					<th>diamond</th>
+				</tr>
+				<tr>
+					<th>(m/s)</th>
+					<td>299&thinsp;792&thinsp;458</td>
+					<td>299&thinsp;700&thinsp;000</td>
+					<td>225&thinsp;000&thinsp;000</td>
+					<td>120&thinsp;000&thinsp;000</td>
+				</tr>
+			</table>
+
+			<p>
+				The speed of light in a vacuum is 3.0 × 10<sup>8</sup> m/s.
+				<br>The speed of light in water is 2.3 × 10<sup>8</sup> m/s.
+				<br>The speed of light in diamond is 1.2 × 10<sup>8</sup> m/s.
+			</p>
+			<p>When we say "the speed of light" we generally mean the vacuum speed.</p>
+		</div>
+		<div><strong>
+				Example: The Sun is 1.50 × 10<sup>8</sup> km from Earth. How long does it take for the light from the
+				Sun to reach us?
+			</strong></div>
+		<div class='example'>
+			<!--
+		384400 km to Moon / 555 px    (between centers)
+		693 km = 1 px 
+		Earth radius = 6371.0 km = 9.2 px
+		Moon radius = 1737.1 km  = 2.5 px
+		-->
+			<style>
+				@keyframes lightspeed {
+					0% {
+						transform: translateX(4.5%);
+					}
+
+					100% {
+						transform: translateX(94%);
+					}
+				}
+
+				#light-wave-1 {
+					transform: translateX(4%);
+					animation: lightspeed 1.25s linear alternate infinite;
+				}
+
+				.stopped {
+					animation: none;
+				}
+			</style>
+
+	</article>
+	<svg viewBox="0 0 600 40" style="background-color: #000;" onclick="hideLightWave1()">
+		<g stroke="none">
+			<rect id="light-wave-1" x="0" y="19" width="10" height="2" rx="1" ry="1" fill="#fff" />
+			<circle cx="20" cy="20" r="9.2" fill="rgb(150,150,210)" />
+			<circle cx="575" cy="20" r="2.5" fill="rgb(179,175,172)" />
+		</g>
+	</svg>
+	<article>
+		<script>
+			function hideLightWave1() {
+				if (document.getElementById("light-wave-1").style.display === "none") {
+					document.getElementById("light-wave-1").style.display = "block";
+				} else {
+					document.getElementById("light-wave-1").style.display = "none";
+				}
+			}
+		</script>
+		<strong>Example:</strong> The center of the Earth is 384 400 km from the center of the Moon. What is the
+		shortest amount of time it takes light to travel from the Moon to the Earth?
+		<details>
+			<summary>Local Massive Objects Data Table</summary>
+			<style>
+				th {
+					background: #fff;
+					border: 0px solid #000;
+					color: #000;
+				}
+
+				.black {
+					background-color: #000;
+					border: 0px solid #000;
+					padding: 7px;
+				}
+
+				.planet {
+					margin: auto;
+					border-radius: 50%;
+					padding: 0px;
+					border: 0px solid #000;
+				}
+
+				.sun {
+					width: 90px;
+					height: 90px;
+					background-color: #fff;
+					top: -25px;
+					left: -20px;
+					position: relative;
+				}
+
+				.sun-div {
+					/* margin: 0px; */
+					width: 50px;
+					height: 50px;
+				}
+
+				.mercury {
+					width: 6px;
+					height: 6px;
+					background-color: rgb(199, 195, 192);
+				}
+
+				.venus {
+					width: 11px;
+					height: 11px;
+					background-color: rgb(216, 209, 203);
+				}
+
+				.earth {
+					width: 11.5px;
+					height: 11.5px;
+					background-color: rgb(130, 137, 179);
+				}
+
+				.moon {
+					width: 4px;
+					height: 4px;
+					background-color: rgb(159, 155, 152);
+				}
+
+				.mars {
+					width: 8px;
+					height: 8px;
+					background-color: rgb(207, 187, 137);
+				}
+
+				.jupiter {
+					width: 35px;
+					height: 35px;
+					background-color: rgb(238, 236, 188);
+				}
+
+				.saturn {
+					width: 30px;
+					height: 30px;
+					background-color: rgb(223, 229, 181);
+				}
+
+				.uranus {
+					width: 18px;
+					height: 18px;
+					background-color: rgb(173, 200, 211);
+				}
+
+				.neptune {
+					width: 17px;
+					height: 17px;
+					background-color: rgb(160, 183, 214);
+				}
+
+				.saturn-ring {
+					border-radius: 50%;
+					width: 44px;
+					height: 44px;
+					position: relative;
+					top: -7px;
+					left: -7px;
+					border: 4px solid rgba(216, 218, 169, 0.7);
+				}
+
+				.uranus-ring {
+					border-radius: 50%;
+					width: 28px;
+					height: 28px;
+					position: relative;
+					top: -5px;
+					left: -5px;
+					border: 1px solid rgba(255, 255, 230, 0.2);
+				}
+			</style>
+			<table>
+				<tr>
+					<th class="black"></th>
+					<th>Planet</th>
+					<th>mass (kg)</th>
+					<th>radius (km)</th>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Sun">
+							<div class="planet sun-div">
+								<div class="planet sun"></div>
+							</div>
+						</a>
+					</td>
+					<td>Sun</td>
+					<td>2.00 × 10<sup>30</sup>
+					</td>
+					<td>695&#8239;700</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Mercury_(planet)">
+							<div class="planet mercury"></div>
+						</a>
+					</td>
+					<td>Mercury</td>
+					<td>3.301 × 10<sup>23</sup>
+					</td>
+					<td>2440</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Venus">
+							<div class="planet venus"></div>
+						</a>
+					</td>
+					<td>Venus</td>
+					<td>4.867 × 10<sup>24</sup>
+					</td>
+					<td>6052</td>
+				</tr>
+				<tr>
+
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Earth">
+							<div class="planet earth"></div>
+						</a>
+					</td>
+					<td>Earth</td>
+					<td>5.972 × 10<sup>24</sup>
+					</td>
+					<td>6371</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Moon">
+							<div class="planet moon"></div>
+						</a>
+					</td>
+					<td>Moon</td>
+					<td>7.346 × 10<sup>22</sup>
+					</td>
+					<td>1737</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Mars">
+							<div class="planet mars"></div>
+						</a>
+					</td>
+					<td>Mars</td>
+					<td>6.417 × 10<sup>23</sup>
+					</td>
+					<td>3390</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Jupiter">
+							<div class="planet jupiter"></div>
+						</a>
+					</td>
+					<td>Jupiter</td>
+					<td>1.899 × 10<sup>27</sup>
+					</td>
+					<td>70&#8239;000</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Saturn">
+							<div class="planet saturn">
+								<div class="saturn-ring"></div>
+							</div>
+						</a>
+					</td>
+					<td>Saturn</td>
+					<td>5.685 × 10<sup>26</sup>
+					</td>
+					<td>58&#8239;232</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Uranus">
+							<div class="planet uranus">
+								<div class="uranus-ring"></div>
+							</div>
+						</a>
+					</td>
+					<td>Uranus</td>
+					<td>8.68 × 10<sup>25</sup>
+					</td>
+					<td>25&#8239;362</td>
+				</tr>
+				<tr>
+					<td class="black">
+						<a href="https://en.wikipedia.org/wiki/Neptune">
+							<div class="planet neptune"></div>
+						</a>
+					</td>
+					<td>Neptune</td>
+					<td>1.024 × 10<sup>26</sup>
+					</td>
+					<td>24&#8239;622</td>
+				</tr>
+			</table>
+		</details>
+		<details>
+			<summary>solution</summary>
+			$$\Delta x = 384\,400\,\mathrm{km} - 6371\,\mathrm{km} -1737\,\mathrm{km} = 376\,000\,\mathrm{km}$$
+			<br>
+			$$v = \frac{\Delta x}{\Delta t} $$
+			$$\Delta t = \frac{\Delta x}{v} $$
+			$$\Delta t = \frac{3.76 \times 10^8 \,\mathrm{m}}{3.0 \times 10^8\,\mathrm{\frac{m}{s}}} $$
+			$$\Delta t = 1.25\, \mathrm{s} $$
+		</details>
+		</div>
+
+		<div class='example'>
+			<p>A <strong>light-year [ly]</strong> is a unit of distance. A light year is the distance that light travels
+				in one year. It is mostly used to measure distances to objects outside the solar system.</p>
+		</div>
+
+		<h2 class='underlined' id="electromagnetic-spectrum">The Electromagnetic Spectrum</h2>
+		<p>
+			<a href="https://www.youtube.com/watch?v=IXxZRZxafEQ">Light</a> can be viewed as a spectrum.
+			The lowest energy, lowest frequency, and longest wavelength are on one end.
+			The highest energy, highest frequency, and shortest wavelength are on the other.
+		</p>
+		<table style="border: 0px;">
+			<tr>
+				<th> </th>
+				<th style="text-align: left;">region</th>
+				<th style="text-align: left;">wavelength&nbsp;(m)</th>
+				<th style="text-align: left;">frequency&nbsp;(Hz)</th>
+			</tr>
+			<style>
+				.region {
+					text-align: left;
+					/* width: 40%; */
+					border: 0px;
+				}
+
+				.lines {
+					border-top: 1px solid;
+					border-bottom: 1px solid;
+					border-left: 0px solid;
+					border-right: 0px solid;
+					border-color: #aaa;
+				}
+
+				.no-lines {
+					border: 0px;
+					background-color: #fff;
+				}
+
+				.down-half {
+					height: 70px;
+					text-align: left;
+				}
+
+				.down-60 {
+					position: relative;
+					top: -35px;
+					background-color: #fff;
+					padding: 5px 15px 2px 15px;
+					border: 1px solid #aaa;
+					border-radius: 5px;
+				}
+
+				.black-BG {
+					padding: 26px 20px;
+					background-color: #000;
+				}
+
+				.black-fade-out {
+					padding: 26px 20px;
+					background: linear-gradient(#000, #000, #999);
+				}
+
+				.black-fade-in {
+					padding: 26px 20px;
+					background: linear-gradient(#999, #000, #000);
+				}
+
+				.rainbow {
+					padding: 26px 20px;
+					margin: 0;
+					background: linear-gradient(rgb(0, 0, 0), rgb(73, 0, 140), rgb(38, 4, 235), rgb(1, 148, 227), rgb(0, 216, 136), rgb(1, 183, 0), rgb(221, 204, 0), rgb(255, 95, 0), rgb(235, 38, 0), rgb(200, 12, 0), rgb(0, 0, 0));
+				}
+			</style>
+			<tr>
+				<td class='no-lines'>
+					<span class="black-fade-in hide-on-mobile"></span>
+				</td>
+				<td class="region lines"><a href="https://www.youtube.com/watch?v=RLykC1VN7NY">gamma ray</a></td>
+				<td class="down-half lines"></td>
+				<td class="down-half lines"></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="black-BG hide-on-mobile"></span> </td>
+				<td class="region lines"><a href="https://www.youtube.com/watch?v=gsV7SJDDCY4">x-ray</a></td>
+				<td class="down-half lines"><span class="down-60">2 × 10<sup>-11</sup></span></td>
+				<td class="down-half lines"><span class="down-60">1.5 × 10<sup>19</sup></span></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="black-BG hide-on-mobile"></span> </td>
+				<td class="region lines"> <a href="https://www.youtube.com/watch?v=V9K6gjR07Po">ultraviolet</a></td>
+				<td class="down-half lines"><span class="down-60">1 × 10<sup>-8</sup></span></td>
+				<td class="down-half lines"><span class="down-60">3 × 10<sup>16</sup></span></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="rainbow hide-on-mobile"></span> </td>
+				<td class='region lines'> <a href="https://www.youtube.com/watch?v=9udYi7exojk">visible light </td>
+				<td class="down-half lines"><span class="down-60">4 × 10<sup>-7</sup></span></td>
+				<td class="down-half lines"><span class="down-60">7.5 × 10<sup>14</sup></span></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="black-BG hide-on-mobile"></span> </td>
+				<td class="region lines"><a href="https://www.youtube.com/watch?v=1DiqL8iFD8g">infrared</a></td>
+				<td class="down-half lines"><span class="down-60">7.5 × 10<sup>-7</sup></span></td>
+				<td class="down-half lines"><span class="down-60">4 × 10<sup>14</sup></span></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="black-BG hide-on-mobile"></span> </td>
+				<td class="region lines"><a href="https://www.youtube.com/watch?v=nqTDCkuVADw">microwave</a></td>
+				<td class="down-half lines"><span class="down-60">1 × 10<sup>-2</sup></span></td>
+				<td class="down-half lines"><span class="down-60">3 × 10<sup>10</sup></span></td>
+			</tr>
+			<tr>
+				<td class='no-lines'> <span class="black-fade-out hide-on-mobile"></span> </td>
+				<td class="region lines"><a href="https://www.youtube.com/watch?v=NGGVy_M0zBY">radio wave</a></td>
+				<td class="down-half lines"><span class="down-60">1</span></td>
+				<td class="down-half lines"><span class="down-60">3 × 10<sup>8</sup></span></td>
+			</tr>
+		</table>
+		<p>
+			The electromagnetic spectrum is very loosely divided in these regions based on the <a
+				href='https://en.wikipedia.org/wiki/Electromagnetic_spectrum#Rationale_for_names'>source</a> of that
+			light.
+		</p>
+		<p>
+			Microwave and radio waves are produced by changing electric current.
+			Infrared light is mostly produced by the thermal radiation of bodies at room temperature.
+			Visible light comes from thermal radiation (sunlight), chemical reactions (fire), and numerous technologies
+			(LED, laser, cathode ray tube, gas discharge lamps).
+		</p>
+		<p>
+			Ultraviolet light comes from the same sources as visible light, but at a slightly higher frequency that
+			humans can't see.
+			X-rays can be produced by accelerating electrons very quickly, like in cathode ray vacuum tubes.
+			Gamma rays are similar to X-rays, but they are generally distinguished by coming from radioactive decay
+			instead of electron acceleration.
+		</p>
+
+		<p>
+			Some classify microwaves as a subregion inside radio. Also, the x-ray and gamma-ray regions are starting to
+			blend as the technology that produces x-rays improves.
+		</p>
+
+
+
+		<div class='example'>
+			<svg viewBox="0 0 605 115">
+				<defs>
+					<linearGradient id="spectrumGradient">
+
+						<stop id="stop380nm" offset="0.000000" style="stop-color:#020005;" />
+						<stop id="stop385nm" offset="0.013514" style="stop-color:#020006;" />
+						<stop id="stop390nm" offset="0.027027" style="stop-color:#030008;" />
+						<stop id="stop395nm" offset="0.040541" style="stop-color:#04000A;" />
+						<stop id="stop400nm" offset="0.054054" style="stop-color:#06000D;" />
+						<stop id="stop405nm" offset="0.067568" style="stop-color:#080110;" />
+						<stop id="stop410nm" offset="0.081081" style="stop-color:#0C0117;" />
+						<stop id="stop415nm" offset="0.094595" style="stop-color:#11021F;" />
+						<stop id="stop420nm" offset="0.108108" style="stop-color:#17032A;" />
+						<stop id="stop425nm" offset="0.121622" style="stop-color:#1F053A;" />
+						<stop id="stop430nm" offset="0.135135" style="stop-color:#25084B;" />
+						<stop id="stop435nm" offset="0.148649" style="stop-color:#290A5C;" />
+						<stop id="stop440nm" offset="0.162162" style="stop-color:#2B0E6F;" />
+						<stop id="stop445nm" offset="0.175676" style="stop-color:#291380;" />
+						<stop id="stop450nm" offset="0.189189" style="stop-color:#1F237B;" />
+						<stop id="stop455nm" offset="0.202703" style="stop-color:#132E74;" />
+						<stop id="stop460nm" offset="0.216216" style="stop-color:#09376C;" />
+						<stop id="stop465nm" offset="0.229730" style="stop-color:#0A3E66;" />
+						<stop id="stop470nm" offset="0.243243" style="stop-color:#0C4667;" />
+						<stop id="stop475nm" offset="0.256757" style="stop-color:#0E4F6A;" />
+						<stop id="stop480nm" offset="0.270270" style="stop-color:#10596C;" />
+						<stop id="stop485nm" offset="0.283784" style="stop-color:#11636D;" />
+						<stop id="stop490nm" offset="0.297297" style="stop-color:#146E6F;" />
+						<stop id="stop495nm" offset="0.310811" style="stop-color:#177970;" />
+						<stop id="stop500nm" offset="0.324324" style="stop-color:#178672;" />
+						<stop id="stop505nm" offset="0.337838" style="stop-color:#1A9574;" />
+						<stop id="stop510nm" offset="0.351351" style="stop-color:#1DA375;" />
+						<stop id="stop515nm" offset="0.364865" style="stop-color:#1DB273;" />
+						<stop id="stop520nm" offset="0.378378" style="stop-color:#20C070;" />
+						<stop id="stop525nm" offset="0.391892" style="stop-color:#22CB6B;" />
+						<stop id="stop530nm" offset="0.405405" style="stop-color:#21D662;" />
+						<stop id="stop535nm" offset="0.418919" style="stop-color:#23E054;" />
+						<stop id="stop540nm" offset="0.432432" style="stop-color:#36E842;" />
+						<stop id="stop545nm" offset="0.445946" style="stop-color:#50ED28;" />
+						<stop id="stop550nm" offset="0.459459" style="stop-color:#73EB22;" />
+						<stop id="stop555nm" offset="0.472973" style="stop-color:#8FE722;" />
+						<stop id="stop560nm" offset="0.486486" style="stop-color:#A5E221;" />
+						<stop id="stop565nm" offset="0.500000" style="stop-color:#B9DC22;" />
+						<stop id="stop570nm" offset="0.513514" style="stop-color:#CBD621;" />
+						<stop id="stop575nm" offset="0.527027" style="stop-color:#DCCE20;" />
+						<stop id="stop580nm" offset="0.540541" style="stop-color:#ECC420;" />
+						<stop id="stop585nm" offset="0.554054" style="stop-color:#F2B735;" />
+						<stop id="stop590nm" offset="0.567568" style="stop-color:#F5AB42;" />
+						<stop id="stop595nm" offset="0.581081" style="stop-color:#F69F49;" />
+						<stop id="stop600nm" offset="0.594595" style="stop-color:#F7944B;" />
+						<stop id="stop605nm" offset="0.608108" style="stop-color:#F98848;" />
+						<stop id="stop610nm" offset="0.621622" style="stop-color:#FA7B42;" />
+						<stop id="stop615nm" offset="0.635135" style="stop-color:#FB6C39;" />
+						<stop id="stop620nm" offset="0.648649" style="stop-color:#FD5B2E;" />
+						<stop id="stop625nm" offset="0.662162" style="stop-color:#FC471F;" />
+						<stop id="stop630nm" offset="0.675676" style="stop-color:#F7300F;" />
+						<stop id="stop635nm" offset="0.689189" style="stop-color:#EA220D;" />
+						<stop id="stop640nm" offset="0.702703" style="stop-color:#D42215;" />
+						<stop id="stop645nm" offset="0.716216" style="stop-color:#BF2318;" />
+						<stop id="stop650nm" offset="0.729730" style="stop-color:#A92309;" />
+						<stop id="stop655nm" offset="0.743243" style="stop-color:#981F07;" />
+						<stop id="stop660nm" offset="0.756757" style="stop-color:#871B06;" />
+						<stop id="stop665nm" offset="0.770270" style="stop-color:#771805;" />
+						<stop id="stop670nm" offset="0.783784" style="stop-color:#671504;" />
+						<stop id="stop675nm" offset="0.797297" style="stop-color:#591303;" />
+						<stop id="stop680nm" offset="0.810811" style="stop-color:#4D1103;" />
+						<stop id="stop685nm" offset="0.824324" style="stop-color:#420E02;" />
+						<stop id="stop690nm" offset="0.837838" style="stop-color:#370C01;" />
+						<stop id="stop695nm" offset="0.851351" style="stop-color:#2E0A01;" />
+						<stop id="stop700nm" offset="0.864865" style="stop-color:#270801;" />
+						<stop id="stop705nm" offset="0.878378" style="stop-color:#210600;" />
+						<stop id="stop710nm" offset="0.891892" style="stop-color:#1E0400;" />
+						<stop id="stop715nm" offset="0.905405" style="stop-color:#1A0300;" />
+						<stop id="stop720nm" offset="0.918919" style="stop-color:#170200;" />
+						<stop id="stop725nm" offset="0.932432" style="stop-color:#130100;" />
+						<stop id="stop730nm" offset="0.945946" style="stop-color:#100100;" />
+						<stop id="stop735nm" offset="0.959459" style="stop-color:#0C0100;" />
+						<stop id="stop740nm" offset="0.972973" style="stop-color:#080100;" />
+						<stop id="stop745nm" offset="0.986486" style="stop-color:#060100;" />
+						<stop id="stop750nm" offset="1.000000" style="stop-color:#040100;" />
+					</linearGradient>
+					<linearGradient xlink:href="#spectrumGradient" id="linearGradient3161" x1="192.78572" y1="378.07645"
+						x2="652.92859" y2="378.07645" gradientUnits="userSpaceOnUse"
+						gradientTransform="matrix(1.31031, 0, 0, 0.339394, -252.075, -49.3168)" />
+				</defs>
+				<rect
+					style="fill: url(#linearGradient3161) rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 1; stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+					id="rect2383" width="599" height="64" x="2.5" y="47" />
+				<path
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+					d="M 2.5,3.99989 L 2.5,43" />
+				<path d="M 116.5,4 L 116.5,43"
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+				<path
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+					d="M 188.5,3.999478 L 188.5,42.999588" />
+				<path d="M 308.5,4 L 308.5,43"
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+				<path
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+					d="M 344.50001,3.99989 L 344.50001,43" />
+				<path d="M 392.5,3.999478 L 392.5,42.999588"
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;" />
+				<path
+					style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 1px; stroke-linecap: square; stroke-linejoin: miter; stroke-opacity: 1;"
+					d="M 602.5,3.99989 L 602.5,43" />
+				<g style="font-size: 20px; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); stroke: none;">
+					<text x="497.007" y="30.7897">R</text>
+					<text x="368.473" y="30.6797">O</text>
+					<text x="321.28" y="30.7899">Y</text>
+					<text x="248.743" y="30.6797">G</text>
+					<text x="152.16" y="30.7897">B</text>
+					<text x="59.4297" y="30.7899">V</text>
+				</g>
+				<g style="font-size: 10px; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1;"
+					transform="matrix(0, -1, 1, 0, 0, 0)">
+					<text x="-23.4117" y="13.09">380</text>
+					<text x="-23.3917" y="112.77">450</text>
+					<text x="-23.4213" y="184.77">495</text>
+					<text x="-23.4267" y="304.77">570</text>
+					<text x="-23.4267" y="340.77">590</text>
+					<text x="-23.4663" y="388.77">620</text>
+					<text x="-23.4817" y="598.77">750</text>
+				</g>
+			</svg>
+
+			<strong>Question:</strong> What color in the visible spectrum has the longest wavelength
+			<details>
+				<summary>answer</summary>
+				<p>
+					Red has the longest wavelength.
+				</p>
+			</details>
+		</div>
+
+
+
+		<h2 class='underlined' id="color-vision">Color Vision</h2>
+		<p>
+			Our eyes have two types of cells that respond to visible light, rods and cones.
+			<strong>Rods</strong> detect visible light with a high sensitivity. <strong>Cones</strong> specialize in
+			detecting the wavelength of the light.
+			Cone cells come in different types that are sensitive to different wavelengths of visible light.
+		</p>
+		<p>
+			The number of colors receptors has varied as life has evolved. Most birds and reptiles have 4 different
+			color receptors.
+			Mammals have 2 color vision, with the exception of <a
+				href="https://en.wikipedia.org/wiki/Evolution_of_color_vision_in_primates">primates</a> that have 3
+			color vision.
+		</p>
+		<p>
+			Humans are primates, so we mostly have 3 different color receptors, but some color blind humans have 2.
+			They don't see in black and white, they just have trouble telling the difference between some colors, like
+
+		<p>
+			Human cones cells respond to 3 overlapping regions on the electromagnetic spectrum.
+			We can see every <a href="https://www.youtube.com/watch?v=FTKP0Y9MVus">color</a> on the rainbow from this
+			information.
+		</p>
+		<p>
+			What about colors not on the rainbow?
+			If multiple cones are activated our brains invent colors to describe the experience, like pink or white.</p>
+
+		<strong>Below simulation Shows how image formation will takes place in the human eyes </strong>
+		<div class='center' style="position: relative; width: 300px; height: 200px;">
+			<a href="https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html"
+				style="text-decoration: none;">
+				<img src="https://phet.colorado.edu/sims/html/color-vision/latest/color-vision-600.png"
+					alt="Color Vision" style="border: none;" width="300" height="200" />
+				<div
+					style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity: 0.9; filter: alpha(opacity = 60);">
+				</div>
+				<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+					<tr>
+						<td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+							Click to Run</td>
+					</tr>
+				</table>
+			</a>
+		</div>
+		<p>
+			Information from our <a href="https://www.youtube.com/watch?v=Xp6bxCh_p7c">eyes</a> is processed in our
+			brains to build a guess about what we are seeing.
+			Our brain's interpretation isn't perfect. We call these mistakes <a
+				href="https://www.youtube.com/watch?v=Iw8idyw_N6Q">optical</a> <a
+				href="https://michaelbach.de/ot/">illusions</a>.
+		</p>
+
+		<div class='example'>
+			<strong>Question:</strong> What three colors of light does a TV need to make every color that humans can
+			experience.
+			<details>
+				<summary>answer</summary>
+				<p>
+					Most televisions can only produce red, green, and blue light. They get the other colors from
+					different ratios of red, green, and blue.
+				</p>
+			</details>
+		</div>
+
+		<div class='example'>
+			<strong>Question:</strong> What three pigments does a printer need to make every color that humans can
+			experience.
+			<details>
+				<summary>answer</summary>
+				<p>Most printers use a combination of cyan, magenta, yellow, and black.</p>
+			</details>
+		</div>
+
+
+
+		<h2 class='underlined' id="thermal"> Thermal Radiation</h2>
+		<p>
+			The particles in all substances move and vibrate in a seemingly random way. <a
+				href="..\..\energy\thermo\index.html">Temperature</a> is a measure of the average kinetic energy of
+			these particles. When the temperature is high there is more motion.
+		</p>
+		<p>
+			When charged particles accelerate they produce light. This means that as substances get hotter they make
+			brighter and higher frequency light.
+		</p>
+		<div class="center" style="position: relative; width: 300px; height: 200px;">
+			<a href="https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html"
+				style="text-decoration: none;"><img
+					src="https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum-600.png"
+					alt="Blackbody Spectrum" style="border: none;" width="300" height="200" />
+				<div
+					style="position: absolute; width: 200px; height: 80px; left: 50px; top: 60px; background-color: #FFF; opacity: 0.6; filter: alpha(opacity = 60);">
+				</div>
+				<table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 55px;">
+					<tr>
+						<td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">
+							Click to Run</td>
+					</tr>
+				</table>
+			</a>
+		</div>
+		<!--Light end	-->
+
+
+		<!-- Quamtum Starts-->
+		<header>
+			<h1>
+				<a>Quantum Mechanics</a>
+			</h1>
+		</header>
+		<article>
+			<p>
+				In the early 1900s physicists performed experiments that probed reality at its fundamental level.
+				They found that matter was made of particles they named atoms.
+				Inside each atom they found the <a href="https://www.youtube.com/watch?v=ehHoOYqAT_U">subatomic
+					particles</a>:
+				electrons, protons, and neutrons.
+				They also found that light was made of particles that we now call photons.
+				The strangest result was that all these particles produced wave-like <a
+					href="http://toutestquantique.fr/en/duality/">interference patterns</a>.
+				Light waves are too big to resolve objects that small.
+				Instead, physicists <a
+					href="https://phet.colorado.edu/sims/html/rutherford-scattering/latest/rutherford-scattering_en.html">fired</a>
+				subatomic particles, like electrons, at each other.
+				They were also surprised to discover that particles could produce wave-like <a
+					href="https://en.wikipedia.org/wiki/Double-slit_experiment">interference patterns</a>.
+			</p>
+			<br>
+			<p>
+				The <a href="https://www.youtube.com/watch?v=p-MNSLsjjdo">double slit</a> <a
+					href="https://www.youtube.com/watch?v=uOrqGVr9CeY">experiment</a> is a good example of wave
+				interference.
+				A wave passing through a slit spreads out. It <a
+					href="../waveproperties/index.html#diffraction">diffracts</a>.
+			</p>
+
+			<p>
+				In 1801, Thomas Young produced a double slit interference <a
+					href="https://www.youtube.com/watch?v=G4_4vcNqc-k">pattern</a> with beams of light.
+				In 1909, the experiment was repeated with a single photon at a time.
+				After passing through the double slit, each photon was measured at single location, but the distribution
+				of
+				measurements still produced an interference pattern.
+			</p>
+		</article>
+
+		<!-- Start-->
+		<strong>Young experiment</strong>
+
+		<svg viewBox="0 0 400 150" id="double-slit" style="background-color: #345;">
+			<g fill="#234" stroke="#345" stroke-width="0">
+				<rect width="140.5" height="148" x="1" y="1" rx="0" ry="0" fill="#f2f6f9" stroke="#345"
+					stroke-width="1.5" />
+				<rect id="double-slit-emitter" width="2.5" height="8" x="15" y="71" rx="0.5" ry="0.5" fill="#89a" />
+				<rect width="12" height="10" x="4" y="70" rx="1" ry="1" />
+				<path id="slit" d="M40 1 v70.5 m0 0.5 v5 m0 0.5 v70.5" stroke-width="1.5" />
+				<path id="double-slit-probability-function" d="M 290 0 v100" stroke-width="0" fill="#abc"
+					stroke-linecap="round" stroke-linejoin="round" />
+			</g>
+			<g id="double-slit-hits"></g>
+		</svg>
+
+		<article>
+			<ul class="listing"
+				style="background-color: #fff; border-radius: 15px; padding:10px; border: #345 solid 4px;">
+				<li>
+					<div>
+						&nbsp; &nbsp; &nbsp; &nbsp; <button id="double-slit-button"
+							style="margin:0; background-color: #eee; float: 0; font-size: 1.5em;">emit</button>
+						<br>
+						<label for="slit-one-checkbox">
+							<input type="checkbox" id="slit-one-checkbox" name="slit-one-checkbox" style="width:14px;">
+							<span>emit one at a time</span>
+						</label>
+						<br>
+						<label for="slit-blocked-checkbox">
+							<input type="checkbox" id="slit-blocked-checkbox" name="slit-blocked-checkbox"
+								style="width:14px;">
+							<span>slit blocked</span>
+						</label>
+					</div>
+				</li>
+				<li>
+					<div>
+						wavelength = <input id='slit-wavelength' type="number" value='0.201' min="0" step="0.0001"
+							style="width:100px;">
+						<br>slit separation = <input id='slit-separation' type="number" value='5' min="0" step="0.001"
+							style="width:80px;">
+						<br>slit width = <input id='slit-slitWidth' type="number" value='0.5' min="0" step="0.01"
+							style="width:117px;">
+						<!-- <br>target distance = <input id='slit-distance' type="number" value='100' min="0" step="1" style="width:100px;"> -->
+					</div>
+				</li>
+			</ul>
+			<!-- Quamtum ends-->
+
+			<script>
+				renderMathInElement(document.body);
+			</script>
+			<script src="wave.js "></script>
+			<script src="sound.js "></script>
+			<script src="doubleSlit.js"></script>
+			<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script defer
+				src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+
+			<a href="https://github.com/rafael-fuente/diffractsim">DIfraction simulations</a>
+
+
+</body>
+
+</html>
